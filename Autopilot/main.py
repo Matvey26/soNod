@@ -104,8 +104,8 @@ print("Выключаем автопилот")
 control.sas = True
 print("Включаем САС")
 time.sleep(1)
-control.sas_mode = conn.space_center.SASMode.prograde
-print("Ставим САС на прогрейд")
+control.sas_mode = conn.space_center.SASMode.maneuver
+print("Ставим САС на манёвр")
 
 # Waiting until burn
 print("Ускоряем время до момента, когда мы ускоряться будем")
