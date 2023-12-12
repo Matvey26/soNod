@@ -2,7 +2,7 @@ ship = soNod
 version = 1.12.5
 description = 
 type = VAB
-size = 7.98695898,26.6392822,7.69913578
+size = 7.9869585,26.6392822,7.69913483
 steamPublishedFileId = 0
 persistentId = 3619757714
 rot = 0,0,0,0
@@ -16,7 +16,7 @@ PART
 {
 	part = roverBody.v2_4293640320
 	partName = Part
-	persistentId = 1710929968
+	persistentId = 1540427138
 	pos = -0.600000024,43,-0.800000012
 	attPos = 1.32331228,-0.0269012451,-0.0716802478
 	attPos0 = -1.92331231,43.0269012,-0.728319764
@@ -264,8 +264,8 @@ PART
 {
 	part = roverWheel2_4293616792
 	partName = Part
-	persistentId = 1110674846
-	pos = 0.0877757072,43.4963036,-1.39763403
+	persistentId = 1466091710
+	pos = 0.0877757668,43.4963036,-1.39763403
 	attPos = 0,0,0
 	attPos0 = -0.726315677,0.496291757,0.550139427
 	rot = -0.0237324554,-0.706708431,-0.706708431,0.0237324554
@@ -543,7 +543,7 @@ PART
 {
 	part = roverWheel2_4293612120
 	partName = Part
-	persistentId = 1582341706
+	persistentId = 3304896600
 	pos = -1.36209249,43.4933014,-1.3076067
 	attPos = 0,0,0
 	attPos0 = 0.726315618,0.493289471,0.557585716
@@ -822,7 +822,7 @@ PART
 {
 	part = roverWheel2_4293610222
 	partName = Part
-	persistentId = 3168944497
+	persistentId = 2709912624
 	pos = -1.36212158,42.4860497,-1.30804431
 	attPos = 0,0,0
 	attPos0 = 0.726315379,-0.513942122,0.558023334
@@ -1101,11 +1101,11 @@ PART
 {
 	part = roverWheel2_4293613190
 	partName = Part
-	persistentId = 3432886451
-	pos = 0.088076055,42.463726,-1.39316165
+	persistentId = 4032252465
+	pos = 0.088076055,42.463726,-1.39316177
 	attPos = 0,0,0
 	attPos0 = -0.726316035,-0.536264956,0.545653522
-	rot = -0.0237325337,-0.70670861,-0.706708193,0.0237325188
+	rot = -0.0237325355,-0.70670861,-0.706708193,0.0237325206
 	attRot = 0.707106709,0,0,-0.707106709
 	attRot0 = 0.707106769,2.10734271E-07,2.95028002E-07,-0.707106888
 	mir = 1,1,1
@@ -1380,11 +1380,11 @@ PART
 {
 	part = roverWheel2_4293609716
 	partName = Part
-	persistentId = 2448785102
+	persistentId = 3501309908
 	pos = -1.36128378,43,-1.28192639
 	attPos = 0.000914812088,0.0172923803,-0.0354671478
 	attPos0 = 0.726315379,-0.0172923207,0.56737715
-	rot = 0.706708193,0.0237327572,-0.0237325337,0.70670861
+	rot = 0.706708193,0.0237327591,-0.0237325355,0.70670861
 	attRot = 0.707106709,0,0,0.707106709
 	attRot0 = -2.31807675E-07,-0.707106948,0.707106709,-4.21468513E-08
 	mir = 1,1,1
@@ -1659,7 +1659,7 @@ PART
 {
 	part = ScienceBox_4293591022
 	partName = Part
-	persistentId = 620684889
+	persistentId = 2348000255
 	pos = -0.569707155,42.5436401,-0.349485785
 	attPos = -0.0181035958,1.78813934E-07,0.216585144
 	attPos0 = 1.63912773E-07,-0.456353664,-0.451526642
@@ -1783,8 +1783,8 @@ PART
 {
 	part = solarPanels3_4293589256
 	partName = Part
-	persistentId = 993581241
-	pos = -0.96882534,42.3436356,-0.322647214
+	persistentId = 2895685226
+	pos = -0.968825459,42.3436356,-0.322647214
 	attPos = 0.219326109,0.0250002444,0.104297489
 	attPos0 = -0.019325804,0.375,-0.104297809
 	rot = -0.706708133,-0.0237324815,0.0237325355,-0.706708729
@@ -1901,8 +1901,8 @@ PART
 {
 	part = solarPanels3_4293588656
 	partName = Part
-	persistentId = 1288001977
-	pos = -0.170585901,42.3436317,-0.37632221
+	persistentId = 1664132919
+	pos = -0.170585781,42.3436317,-0.37632221
 	attPos = 0.187433094,-0.0250002146,0.145717517
 	attPos0 = 0.012567332,-0.37500003,-0.145717368
 	rot = -0.0237324629,-0.706708312,-0.70670861,0.0237325262
@@ -2019,8 +2019,8 @@ PART
 {
 	part = sensorBarometer_4293294522
 	partName = Part
-	persistentId = 261586683
-	pos = -0.553126931,42.2761269,-0.281129599
+	persistentId = 3412164388
+	pos = -0.553126931,42.2761269,-0.281129539
 	attPos = 0,0,0
 	attPos0 = 0.267500222,-0.0119569022,-0.0693112835
 	rot = 0.482937902,-0.5164994,-0.516499639,-0.482936621
@@ -2148,11 +2148,11 @@ PART
 {
 	part = ksp.r.largeBatteryPack_4293602048
 	partName = Part
-	persistentId = 1788682761
+	persistentId = 1594512788
 	pos = -0.187478185,43,-0.627283812
 	attPos = -0.400000036,-0.192355931,0.00309747458
 	attPos0 = -1.49011612E-08,0.192355961,-0.203098267
-	rot = -8.61059704E-08,0.848756015,9.98038701E-08,-0.528784692
+	rot = -8.61059775E-08,0.848756015,9.98038772E-08,-0.528784692
 	attRot = 9.83853798E-09,0.50000006,-1.49011203E-08,0.866025329
 	attRot0 = -1.1920929E-07,0.499999851,-8.94069672E-08,0.866025567
 	mir = 1,1,1
@@ -2242,11 +2242,11 @@ PART
 {
 	part = ksp.r.largeBatteryPack_4293603180
 	partName = Part
-	persistentId = 368757890
+	persistentId = 2866264579
 	pos = -0.985685349,43,-0.573611259
 	attPos = 0.399999976,-0.18014729,0.00147241354
 	attPos0 = 1.49011612E-08,0.18014732,-0.201473206
-	rot = 1.98940597E-08,0.882319093,1.48428015E-07,0.470651746
+	rot = 1.98940597E-08,0.882319093,1.48428029E-07,0.470651746
 	attRot = -1.9963732E-08,-0.499999613,-2.98022442E-08,0.866025507
 	attRot0 = -1.49011612E-07,-0.49999994,4.47034836E-08,0.866025448
 	mir = 1,1,1
@@ -2336,7 +2336,7 @@ PART
 {
 	part = GooExperiment_4289388504
 	partName = Part
-	persistentId = 508278072
+	persistentId = 2680288917
 	pos = -0.586581945,43,-0.600447536
 	attPos = 6.70552254E-08,-0.0442430824,-0.0876808614
 	attPos0 = -6.70552254E-08,0.0442430526,-0.112319931
@@ -2484,11 +2484,11 @@ PART
 {
 	part = roverWheel2_4293612658
 	partName = Part
-	persistentId = 3500610219
+	persistentId = 777008936
 	pos = 0.0899105072,43,-1.37950563
 	attPos = 0.00162506104,0.0366159379,0.00705718994
 	attPos0 = -0.728855491,-0.0366158783,0.524852812
-	rot = 0.0237325337,0.70670861,0.706708193,-0.0237325188
+	rot = 0.0237325355,0.70670861,0.706708193,-0.0237325206
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = -0.707106769,-2.10734271E-07,-2.95028002E-07,0.707106888
 	mir = 1,1,1
@@ -2763,8 +2763,8 @@ PART
 {
 	part = sensorThermometer_4293579776
 	partName = Part
-	persistentId = 169992130
-	pos = -0.768062353,42.2758942,-0.336148351
+	persistentId = 2351428862
+	pos = -0.768062413,42.2758942,-0.336148351
 	attPos = 0,0,0
 	attPos0 = 0.267742097,0.198793456,-2.30144082E-07
 	rot = 0.0237325244,0.706708252,0.70670867,-0.0237321071
@@ -2892,8 +2892,8 @@ PART
 {
 	part = sensorThermometer_4293580072
 	partName = Part
-	persistentId = 3696772059
-	pos = -0.36125046,42.2761002,-0.363502532
+	persistentId = 3758034581
+	pos = -0.361250401,42.2761002,-0.363502532
 	attPos = 0,0,0
 	attPos0 = 0.267533064,-0.208915472,1.05150884E-08
 	rot = 0.0237325244,0.706708252,0.70670867,-0.0237321071
@@ -3021,7 +3021,7 @@ PART
 {
 	part = sensorGravimeter_4291634126
 	partName = Part
-	persistentId = 1198820240
+	persistentId = 181263807
 	pos = -0.590936661,43.2284851,-0.598682821
 	attPos = 0,0,0
 	attPos0 = 0.0044632908,0.228482515,-0.201469481
@@ -3150,7 +3150,7 @@ PART
 {
 	part = sensorAtmosphere_4293705540
 	partName = Part
-	persistentId = 1333873239
+	persistentId = 3894105796
 	pos = -0.606871247,43.0083046,-1.00144947
 	attPos = 0,0,0
 	attPos0 = -0.00665938854,0.00830459595,0.201453209
@@ -3259,7 +3259,7 @@ PART
 {
 	part = Decoupler.0_4293129538
 	partName = Part
-	persistentId = 91597493
+	persistentId = 3897656759
 	pos = -0.600000024,42.2212143,-0.800000012
 	attPos = 0,-0.021214664,-1.78813934E-07
 	attPos0 = 0,-0.778785706,0
@@ -3424,7 +3424,7 @@ PART
 {
 	part = strutOcto_4289197626
 	partName = Part
-	persistentId = 4276618732
+	persistentId = 2815420960
 	pos = -0.600000024,42.0599709,-0.800000012
 	attPos = 0,0,0
 	attPos0 = 0,0.161234558,0
@@ -3510,11 +3510,11 @@ PART
 {
 	part = strutCube_4289197332
 	partName = Part
-	persistentId = 778759482
-	pos = -0.573055983,42.0422134,-0.399291664
+	persistentId = 1044771123
+	pos = -0.573055983,42.0422134,-0.399291635
 	attPos = 0,0,0
 	attPos0 = 7.4505806E-09,-0.0177601594,-0.401607633
-	rot = -0.706708312,-0.023732787,0.0237327758,-0.70670855
+	rot = -0.706708312,-0.023732787,0.0237327777,-0.70670855
 	attRot = 0,0,0,1
 	attRot0 = -4.21468478E-08,0.707106948,-0.707106709,-4.21468478E-08
 	mir = 1,1,1
@@ -3596,11 +3596,11 @@ PART
 {
 	part = strutCube_4289196834
 	partName = Part
-	persistentId = 3888516202
-	pos = -0.555782318,42.0422134,-0.142396986
+	persistentId = 1090638209
+	pos = -0.555782318,42.0422134,-0.142396867
 	attPos = 0,0,0
 	attPos0 = -1.57915494E-08,0.257469237,3.57627755E-07
-	rot = 0.0237326957,0.706708372,0.706708491,-0.0237327479
+	rot = 0.0237326957,0.706708372,0.706708491,-0.0237327497
 	attRot = 0,0,0,1
 	attRot0 = 5.96046377E-08,-1,-2.08616228E-07,0
 	mir = 1,1,1
@@ -3681,11 +3681,11 @@ PART
 {
 	part = strutCube_4289196044
 	partName = Part
-	persistentId = 4209688872
-	pos = -0.542908907,42.0422058,0.0490556955
+	persistentId = 3247966364
+	pos = -0.542908907,42.0422058,0.0490558147
 	attPos = 7.10543244E-15,-0.0655938387,-7.44814542E-06
 	attPos0 = -1.06581461E-14,0.257469356,-3.69412589E-07
-	rot = 0.0237326957,0.706708372,0.706708491,-0.0237327479
+	rot = 0.0237326957,0.706708372,0.706708491,-0.0237327497
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -3766,11 +3766,11 @@ PART
 {
 	part = strutCube_4289195760
 	partName = Part
-	persistentId = 577513282
-	pos = -0.541926384,42.0421982,0.0636694431
+	persistentId = 1285045832
+	pos = -0.541926384,42.0421982,0.0636696815
 	attPos = 1.77635769E-14,-0.242824316,-6.89624676E-06
 	attPos0 = -1.77635769E-14,0.257469296,-3.69412589E-07
-	rot = 0.0237326957,0.706708372,0.706708491,-0.0237327479
+	rot = 0.0237326957,0.706708372,0.706708491,-0.0237327497
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -3851,7 +3851,7 @@ PART
 {
 	part = strutCube_4289195444
 	partName = Part
-	persistentId = 2526255986
+	persistentId = 3313547304
 	pos = -0.528508306,42.0421982,0.263212025
 	attPos = 0.0166210979,0.0900001526,0.0667033046
 	attPos0 = -0.0166210979,0.11000061,-0.0667042956
@@ -3937,11 +3937,11 @@ PART
 {
 	part = strutCube_4289194632
 	partName = Part
-	persistentId = 2568361178
+	persistentId = 2271772239
 	pos = -0.52441299,42.2809372,0.266787946
 	attPos = 0.0152587239,-0.150000542,-0.00408880273
 	attPos0 = 0.00384509377,-0.238734245,0.00384564558
-	rot = -6.748283E-08,0.730441272,-6.22071695E-07,0.682975471
+	rot = -1.25154102E-07,0.730441332,-5.91247726E-07,0.682975471
 	attRot = 0,-0.707106709,0,0.707106709
 	attRot0 = -5.96046306E-08,0,1,0
 	mir = 1,1,1
@@ -4023,11 +4023,11 @@ PART
 {
 	part = strutCube_4289193308
 	partName = Part
-	persistentId = 228521126
-	pos = -0.5290097,42.5196724,0.26835233
+	persistentId = 977568380
+	pos = -0.52900964,42.5196724,0.26835233
 	attPos = 0,0,0
 	attPos0 = -0.00125884963,0.238734126,-0.00469199941
-	rot = 4.00700593E-08,0.999436617,-1.80260372E-07,-0.0335632823
+	rot = 3.87536829E-08,0.999436617,-1.80216162E-07,-0.0335632861
 	attRot = 0,0,0,1
 	attRot0 = -2.98023171E-08,0.707106829,-2.98023188E-08,0.707106829
 	mir = 1,1,1
@@ -4110,11 +4110,11 @@ PART
 {
 	part = strutCube_4289192986
 	partName = Part
-	persistentId = 2690410480
-	pos = -0.527423203,42.7584076,0.267804682
+	persistentId = 1965668973
+	pos = -0.527423143,42.7584076,0.267804682
 	attPos = 0,0,0
 	attPos0 = -0.00161754154,0.238734514,0.000434815534
-	rot = 3.10680157E-08,0.999436736,-4.48330184E-07,-0.0335632861
+	rot = 2.97517033E-08,0.999436736,-4.48285959E-07,-0.0335632898
 	attRot = 0,0,0,1
 	attRot0 = 0,0,-1.77635642E-15,1
 	mir = 1,1,1
@@ -4196,11 +4196,11 @@ PART
 {
 	part = strutCube_4289192644
 	partName = Part
-	persistentId = 365676744
-	pos = -0.522325337,42.9971466,0.26437968
+	persistentId = 2472032688
+	pos = -0.522325277,42.9971466,0.264379442
 	attPos = 0,0,0
 	attPos0 = -0.00531663653,0.238734454,0.0030708909
-	rot = 3.10680157E-08,0.999436736,-4.48330184E-07,-0.0335632861
+	rot = 2.97517033E-08,0.999436736,-4.48285959E-07,-0.0335632898
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -4282,11 +4282,11 @@ PART
 {
 	part = strutCube_4289192282
 	partName = Part
-	persistentId = 2143831593
-	pos = -0.526166737,43.2358818,0.268767059
+	persistentId = 2386929760
+	pos = -0.526166618,43.2358818,0.26876694
 	attPos = 0,0,0
 	attPos0 = 0.00412378833,0.238734305,-0.00412380742
-	rot = 3.10680157E-08,0.999436736,-4.48330184E-07,-0.0335632861
+	rot = 2.97517033E-08,0.999436736,-4.48285959E-07,-0.0335632898
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -4368,11 +4368,11 @@ PART
 {
 	part = strutCube_4289191896
 	partName = Part
-	persistentId = 1039557616
-	pos = -0.529698431,43.474617,0.275957644
+	persistentId = 2733555377
+	pos = -0.529698372,43.474617,0.275957286
 	attPos = 0,0,0
 	attPos0 = 0.00401280634,0.238735169,-0.00695025874
-	rot = 3.10680157E-08,0.999436736,-4.48330184E-07,-0.0335632861
+	rot = 2.97517033E-08,0.999436736,-4.48285959E-07,-0.0335632898
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -4455,11 +4455,11 @@ PART
 {
 	part = strutConnector_4294443424
 	partName = CompoundPart
-	persistentId = 2753278293
-	pos = -0.422310174,43.5497475,0.278977692
+	persistentId = 2140961628
+	pos = -0.422309995,43.5497475,0.278976977
 	attPos = 0,0,0
 	attPos0 = -0.106930919,0.0751321763,-0.0102424882
-	rot = -0.02373356,0.706707954,-0.706709027,-0.0237329211
+	rot = -0.0237334669,0.706707954,-0.706709027,-0.0237329733
 	attRot = -0.707106709,0,0,-0.707106709
 	attRot0 = 0.707106948,3.97452276E-08,3.73432584E-07,0.707106709
 	mir = 1,1,1
@@ -4503,10 +4503,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4293640320
-		tpersID = 1710929968
-		pos = -0.256562173,0.887071013,-0.00196939707
-		rot = -3.40776052E-09,-1.4909524E-06,-0.70711273,0.707112789
-		dir = -0.277836084,0.960626125,-0.00213269773
+		tpersID = 1540427138
+		pos = -0.256562352,0.887072086,-0.00196969509
+		rot = -6.46068887E-09,-1.48789957E-06,-0.707112968,0.707112968
+		dir = -0.277835935,0.960626185,-0.00213301787
 		col = collider.collider
 	}
 	MODULE
@@ -4594,11 +4594,11 @@ PART
 {
 	part = strutConnector_4294434268
 	partName = CompoundPart
-	persistentId = 2589986993
-	pos = -0.635960221,43.5455322,0.289739311
+	persistentId = 75856741
+	pos = -0.635960221,43.5455322,0.289738834
 	attPos = 0,0,0
 	attPos0 = 0.106930993,0.07091479,-0.00664141076
-	rot = 0.706709266,-0.0237328596,-0.023733262,-0.706707716
+	rot = 0.706709266,-0.0237328056,-0.023733275,-0.706707716
 	attRot = 0.707106709,0,0,-0.707106709
 	attRot0 = -3.94660958E-07,0.707106709,0.707106769,-9.94294869E-09
 	mir = 1,1,1
@@ -4642,10 +4642,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4293640320
-		tpersID = 1710929968
-		pos = -0.264145076,0.883468926,-0.00655567646
-		rot = -6.2949141E-08,1.23336372E-06,-0.707113683,0.707113683
-		dir = -0.286449462,0.958068967,-0.00710923737
+		tpersID = 1540427138
+		pos = -0.264145344,0.883469939,-0.00655543804
+		rot = -6.58905464E-08,1.23630559E-06,-0.707113922,0.707113922
+		dir = -0.286449432,0.958069026,-0.00710897101
 		col = collider.collider
 	}
 	MODULE
@@ -4733,23 +4733,23 @@ PART
 {
 	part = Decoupler.0_4294482298
 	partName = Part
-	persistentId = 991028953
+	persistentId = 1320383994
 	pos = -0.521205425,43.0427551,0.384415686
 	attPos = 9.93262006E-08,0.361849129,-0.116318755
 	attPos0 = 5.04232389E-09,0.161235645,-5.7740607E-08
-	rot = 0.652251005,-0.297227263,0.245695561,-0.652578294
+	rot = 0.652251005,-0.297227204,0.245695561,-0.652578294
 	attRot = 0.644234955,-0.662802577,-0.266004503,-0.273671389
 	attRot0 = -0.267449379,0.662187159,0.643636167,-0.275157034
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 1
+	istg = 0
 	resPri = 0
 	dstg = 3
-	sidx = 0
+	sidx = 1
 	sqor = 1
-	sepI = 1
+	sepI = 0
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -4898,11 +4898,11 @@ PART
 {
 	part = commDish_4294474416
 	partName = Part
-	persistentId = 4283456291
+	persistentId = 3549777038
 	pos = -0.585773706,43.6519127,-0.468752295
 	attPos = 0,0,0
 	attPos0 = 0.00802859757,0.651912689,-0.33145377
-	rot = 0.70670867,0.0237324741,-0.0237324014,0.706708193
+	rot = 0.70670867,0.0237324759,-0.0237324033,0.706708193
 	attRot = 0,0,0,1
 	attRot0 = -3.27825546E-07,-0.70710659,0.707107067,-3.27825546E-07
 	mir = 1,1,1
@@ -5034,8 +5034,8 @@ PART
 {
 	part = Decoupler.0_4293999550
 	partName = Part
-	persistentId = 3204034543
-	pos = -0.554317236,41.9013252,-0.120597184
+	persistentId = 218373768
+	pos = -0.554317236,41.9013252,-0.120597064
 	attPos = -2.98023153E-08,0.00259017944,-0.680933893
 	attPos0 = 0,-0.161235809,0
 	rot = 0,0.68297565,0,-0.730441093
@@ -5045,12 +5045,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 3
 	sidx = 2
 	sqor = 2
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -5199,11 +5199,11 @@ PART
 {
 	part = SurfaceScanner_4294490016
 	partName = Part
-	persistentId = 58612786
+	persistentId = 911119888
 	pos = -0.618931055,43.8357315,-0.804706752
 	attPos = 0,1.13248825E-05,0.0964347124
 	attPos0 = 0.0185726285,0.835730672,0.00596618652
-	rot = 0.706708729,0.0237332154,-0.0237329397,0.706708074
+	rot = 0.706708729,0.0237332173,-0.0237329416,0.706708074
 	attRot = 0,0,0,1
 	attRot0 = 2.08616257E-07,-0.707106471,0.707107067,4.47034836E-07
 	mir = 1,1,1
@@ -5375,23 +5375,23 @@ PART
 {
 	part = probeStackSmall_4289187746
 	partName = Part
-	persistentId = 1370954111
-	pos = -0.512319148,43.03899,0.51656431
+	persistentId = 3511672819
+	pos = -0.512319028,43.03899,0.51656431
 	attPos = 0.0153395329,-2.38418579E-07,0.827095568
 	attPos0 = 1.01450189E-06,-0.13249965,-8.94069672E-07
-	rot = 0.715707839,0.0896574184,0.0443257056,0.691201448
+	rot = 0.715707719,0.0896573886,0.0443256646,0.691201568
 	attRot = -0.0623776503,-0.697197199,0.710580289,0.071416162
 	attRot0 = -0.882687926,4.09781897E-08,-0.469959706,-2.98023188E-08
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 1
+	istg = 0
 	resPri = 0
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 1
+	sepI = 0
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -5641,23 +5641,23 @@ PART
 {
 	part = externalTankToroid_4294357230
 	partName = Part
-	persistentId = 1281346007
-	pos = -0.497228026,43.0325966,0.740973055
+	persistentId = 3666209161
+	pos = -0.497227758,43.0325966,0.740973175
 	attPos = 0,0,0
 	attPos0 = 1.43423676E-07,0.224998742,1.34110508E-07
-	rot = 0.678463399,-0.180890545,-0.232143804,0.673109114
+	rot = 0.67846334,-0.180890426,-0.2321437,0.673108995
 	attRot = 0,0,0,1
 	attRot0 = -5.40167093E-08,-0.381602466,-9.49949026E-08,0.924326599
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 1
+	istg = 0
 	resPri = 0
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 1
+	sepI = 0
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -5767,23 +5767,23 @@ PART
 {
 	part = parachuteLarge_4294478222
 	partName = Part
-	persistentId = 3514529816
-	pos = -0.48870641,43.0289879,0.867696106
+	persistentId = 673826546
+	pos = -0.488706112,43.0289879,0.867695749
 	attPos = 0,0,0
 	attPos0 = 7.57035536E-08,0.12706244,5.43861844E-08
-	rot = 0.678462863,-0.180890679,-0.232143447,0.67310971
+	rot = 0.678462744,-0.18089065,-0.232143342,0.673109651
 	attRot = 0,0,0,0.99999994
 	attRot0 = -1.0708051E-07,2.98023188E-08,-1.82495427E-07,1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 3
 	sidx = 3
 	sqor = 2
-	sepI = 1
+	sepI = 0
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -5791,6 +5791,7 @@ PART
 	modSize = 0,0,0
 	link = radialDrogue_4292843916
 	link = radialDrogue_4292843644
+	link = longAntenna_4293223796
 	attN = bottom,externalTankToroid_4294357230_0|-0.00206490001|0_0|-0.100000001|0_0|-0.00206490001|0_0|-0.100000001|0
 	EVENTS
 	{
@@ -5926,23 +5927,23 @@ PART
 {
 	part = smallRadialEngine.v2_4294355962
 	partName = Part
-	persistentId = 2516686759
-	pos = -1.06949782,42.8887405,0.797226131
+	persistentId = 489187618
+	pos = -1.06949842,42.8887405,0.79722625
 	attPos = 0,0,0
 	attPos0 = -0.396866977,0.0218087491,0.439701408
-	rot = 0.526127756,0.618964374,0.460138768,0.358253419
+	rot = 0.526127577,0.618964195,0.460138828,0.35825333
 	attRot = 0,0,0,1
 	attRot0 = 0.0962929279,0.894153476,-0.232471675,0.370370448
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 4
 	sidx = 0
 	sqor = 2
-	sepI = 1
+	sepI = 0
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -6185,23 +6186,23 @@ PART
 {
 	part = smallRadialEngine.v2_4294354158
 	partName = Part
-	persistentId = 714246964
-	pos = -0.0860155821,42.6060715,0.723054469
+	persistentId = 1142766413
+	pos = -0.0860146284,42.6060715,0.723054349
 	attPos = 0,0,0
 	attPos0 = 0.579226196,0.0218079071,0.123846561
-	rot = -0.262063801,0.72837615,0.588391304,-0.233638093
+	rot = -0.262063801,0.72837621,0.588391304,-0.233638048
 	attRot = 0,0,0,1
 	attRot0 = -0.153179988,0.767826855,-0.199627861,-0.589174449
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 4
 	sidx = 0
 	sqor = 2
-	sepI = 1
+	sepI = 0
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -6436,23 +6437,23 @@ PART
 {
 	part = smallRadialEngine.v2_4294354032
 	partName = Part
-	persistentId = 2751660428
-	pos = -0.331772268,43.6011238,0.767895997
+	persistentId = 3719163643
+	pos = -0.331771642,43.6011238,0.76789552
 	attPos = 0,0,0
 	attPos0 = -0.182358623,0.0218105894,-0.56354773
-	rot = 0.788192987,-0.109413378,-0.128252447,0.591888726
+	rot = 0.788193047,-0.109413356,-0.128252432,0.591888785
 	attRot = 0.121373951,-5.58443922E-08,2.3200954E-07,-0.992606819
 	attRot0 = 0.13116464,0.129379138,-0.0172682274,0.98273021
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 4
 	sidx = 0
 	sqor = 2
-	sepI = 1
+	sepI = 0
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -6687,8 +6688,8 @@ PART
 {
 	part = trussAdapter_4293999470
 	partName = Part
-	persistentId = 3890340824
-	pos = -0.554317236,41.2194519,-0.120595753
+	persistentId = 1270531458
+	pos = -0.554317236,41.2194519,-0.120595574
 	attPos = 0,0,0
 	attPos0 = 5.96046519E-08,-0.681873322,7.45058273E-08
 	rot = 0,0.772474289,0,-0.635046124
@@ -6698,12 +6699,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -6772,8 +6773,8 @@ PART
 {
 	part = batteryBankLarge_4293778596
 	partName = Part
-	persistentId = 2122593972
-	pos = -0.554317236,40.6986198,-0.120595694
+	persistentId = 2848417106
+	pos = -0.554317236,40.6986198,-0.120595515
 	attPos = 0,0,0
 	attPos0 = 5.8537843E-08,-0.520832062,-1.18284271E-08
 	rot = 0,-4.09781933E-08,0,1
@@ -6783,12 +6784,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -6868,23 +6869,23 @@ PART
 {
 	part = radialDrogue_4292843916
 	partName = Part
-	persistentId = 2366023813
-	pos = -0.488706052,43.5495758,1.10964179
+	persistentId = 3312627190
+	pos = -0.488705665,43.5495758,1.10964155
 	attPos = 0.0816105604,-0.00389310718,-0.0390131176
 	attPos0 = -0.389378518,0.230408773,-0.389378071
-	rot = 0.85551995,0.0984333456,0.0231268592,0.507801354
+	rot = 0.85551995,0.0984332412,0.0231268816,0.507801235
 	attRot = -0.230189413,1.36385809E-08,-1.71391363E-07,-0.973145962
 	attRot0 = 0.212667063,0.372406989,-0.0880893096,0.899069607
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 2
 	sidx = 1
 	sqor = 2
-	sepI = 1
+	sepI = 0
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -7026,23 +7027,23 @@ PART
 {
 	part = radialDrogue_4292843644
 	partName = Part
-	persistentId = 2257074208
-	pos = -0.458325803,42.495533,1.07758045
+	persistentId = 4075284764
+	pos = -0.458325446,42.495533,1.07758045
 	attPos = -0.0816106796,-0.00389263034,0.0390131772
 	attPos0 = 0.389377981,0.230407879,0.38937676
-	rot = -0.0647754967,0.837273121,0.537354648,-0.0776410699
+	rot = -0.0647755712,0.8372733,0.537354648,-0.0776411146
 	attRot = 0,0,0,1
 	attRot0 = -3.11691167E-07,-0.923879445,-9.12182145E-07,0.382683516
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 2
 	sidx = 1
 	sqor = 2
-	sepI = 1
+	sepI = 0
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -7184,8 +7185,8 @@ PART
 {
 	part = fairingSize2_4290004000
 	partName = Part
-	persistentId = 3954802553
-	pos = -0.554317236,40.3366203,-0.120595574
+	persistentId = 3745046556
+	pos = -0.554317236,40.3366203,-0.120595336
 	attPos = 0,0,0
 	attPos0 = 2.81782625E-10,-0.361999512,5.97202856E-08
 	rot = 0,7.82310963E-08,0,1
@@ -7195,12 +7196,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 3
+	istg = 2
 	resPri = 0
 	dstg = 5
 	sidx = 0
 	sqor = 3
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 684.397949
@@ -7654,8 +7655,8 @@ PART
 {
 	part = asasmodule1-2_4293980878
 	partName = Part
-	persistentId = 3783837714
-	pos = -0.554317236,39.8866196,-0.120595276
+	persistentId = 4139271905
+	pos = -0.554317236,39.8866196,-0.120594978
 	attPos = 0,0,0
 	attPos0 = 2.81762197E-10,-0.450000763,5.9720314E-08
 	rot = 0,7.82310963E-08,0,1
@@ -7665,12 +7666,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -7774,8 +7775,8 @@ PART
 {
 	part = Rockomax16.BW_4290028694
 	partName = Part
-	persistentId = 3186341455
-	pos = -0.554317236,38.7166214,-0.120594978
+	persistentId = 3712971590
+	pos = -0.554317236,38.7166214,-0.120594621
 	attPos = 0,0,0
 	attPos0 = 2.81897311E-10,-1.16999817,5.97202785E-08
 	rot = 0,7.82310963E-08,0,1
@@ -7785,12 +7786,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -7879,8 +7880,8 @@ PART
 {
 	part = Rockomax16.BW_4290024166
 	partName = Part
-	persistentId = 1713556606
-	pos = -0.5543167,36.8766251,-0.120592475
+	persistentId = 2906933424
+	pos = -0.5543167,36.8766251,-0.120591998
 	attPos = 0,0,0
 	attPos0 = 2.81868362E-10,-1.83999634,5.9720314E-08
 	rot = 0,7.82310963E-08,0,1
@@ -7890,21 +7891,22 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
 	link = engineLargeSkipper.v2_4290027018
+	link = commDish_4293238348
+	link = commDish_4293230660
 	link = largeSolarPanel_4289940348
-	link = largeSolarPanel_4293540922
-	link = commDish_4292911400
+	link = largeSolarPanel_4293229598
 	attN = top,Rockomax16.BW_4290028694_0|0.920000017|0_0|1|0_0|0.920000017|0_0|1|0
 	attN = bottom,engineLargeSkipper.v2_4290027018_0|-0.920000017|0_0|-1|0_0|-0.920000017|0_0|-1|0
 	EVENTS
@@ -7987,8 +7989,8 @@ PART
 {
 	part = engineLargeSkipper.v2_4290027018
 	partName = Part
-	persistentId = 2005365443
-	pos = -0.554316819,34.9436264,-0.12059164
+	persistentId = 1404276016
+	pos = -0.554316819,34.9436264,-0.120591044
 	attPos = 0,0,0
 	attPos0 = 2.81876744E-10,-1.93299866,5.97202572E-08
 	rot = 0,7.82310963E-08,0,1
@@ -7998,12 +8000,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 6
 	sidx = 0
 	sqor = 4
-	sepI = 2
+	sepI = 1
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -8265,8 +8267,8 @@ PART
 {
 	part = Decoupler.2_4289931528
 	partName = Part
-	persistentId = 2742771950
-	pos = -0.55431658,33.4816284,-0.12059021
+	persistentId = 1666041352
+	pos = -0.55431658,33.4816284,-0.120589495
 	attPos = 0,0,0
 	attPos0 = 2.81891455E-10,-1.46199799,5.97204419E-08
 	rot = 0,7.82310963E-08,0,1
@@ -8276,12 +8278,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 7
 	sidx = 1
 	sqor = 4
-	sepI = 4
+	sepI = 3
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -8430,8 +8432,8 @@ PART
 {
 	part = asasmodule1-2_4288991946
 	partName = Part
-	persistentId = 652616490
-	pos = -0.554316461,33.1316299,-0.120589554
+	persistentId = 4249960298
+	pos = -0.554316461,33.1316299,-0.120588779
 	attPos = 0,0,0
 	attPos0 = 0,-0.349998474,0
 	rot = 0,0.130526319,0,0.991444886
@@ -8441,12 +8443,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -8550,8 +8552,8 @@ PART
 {
 	part = Rockomax64.BW_4289898502
 	partName = Part
-	persistentId = 3472891684
-	pos = -0.554316401,29.1516304,-0.120588899
+	persistentId = 1698945830
+	pos = -0.554316401,29.1516304,-0.120588064
 	attPos = 0,0,0
 	attPos0 = 0,-3.97999954,0
 	rot = 0,0.130526319,0,0.991444886
@@ -8561,12 +8563,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -8661,8 +8663,8 @@ PART
 {
 	part = Rockomax16.BW_4289897770
 	partName = Part
-	persistentId = 1486169722
-	pos = -0.554315627,24.5016308,-0.120586038
+	persistentId = 3603473481
+	pos = -0.554315627,24.5016308,-0.120585084
 	attPos = 0,0,0
 	attPos0 = 2.81900725E-10,-4.64999962,5.97200156E-08
 	rot = 0,0.130526319,0,0.991444886
@@ -8672,12 +8674,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -8766,8 +8768,8 @@ PART
 {
 	part = asasmodule1-2_4294548770
 	partName = Part
-	persistentId = 3954197739
-	pos = -0.554315507,23.3316307,-0.120585263
+	persistentId = 2509260884
+	pos = -0.554315507,23.3316307,-0.120584249
 	attPos = 0,0,0
 	attPos0 = 5.63915026E-10,-1.17000008,1.194405E-07
 	rot = 0,0.130526319,0,0.991444886
@@ -8777,12 +8779,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -8886,8 +8888,8 @@ PART
 {
 	part = SSME_4289877842
 	partName = Part
-	persistentId = 1361782678
-	pos = -0.554315507,23.0816307,-0.120585144
+	persistentId = 753234296
+	pos = -0.554315507,23.0816307,-0.12058413
 	attPos = 0,0,0
 	attPos0 = 5.63375124E-10,-0.25,1.19440074E-07
 	rot = 0,0.130526319,0,0.991444886
@@ -8897,12 +8899,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 5
+	istg = 4
 	resPri = 0
 	dstg = 8
 	sidx = 1
 	sqor = 5
-	sepI = 4
+	sepI = 3
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -9147,23 +9149,23 @@ PART
 {
 	part = radialDecoupler1-2_4289182084
 	partName = Part
-	persistentId = 1575363531
-	pos = -1.62846315,28.9235191,0.499569237
+	persistentId = 107827079
+	pos = -1.62846291,28.9235191,0.499569952
 	attPos = 0,0,0
 	attPos0 = -1.19805026,-0.228111267,0.321016341
-	rot = 0,0.258819014,0,0.965925872
+	rot = 0,0.258819073,0,0.965925932
 	attRot = 0,0,0,1
 	attRot0 = 0,0.130526111,0,0.991444886
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 5
+	istg = 4
 	resPri = 0
 	dstg = 9
 	sidx = 0
 	sqor = 5
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -9297,23 +9299,23 @@ PART
 {
 	part = Thoroughbred_4289887010
 	partName = Part
-	persistentId = 1551775771
-	pos = -2.63107634,26.1097755,1.50218201
+	persistentId = 3759163596
+	pos = -2.63107634,26.1097755,1.50218248
 	attPos = -3.57627869E-06,-2.67663193,5.36441803E-07
 	attPos0 = -1.36958659,-0.137111664,0.366979718
-	rot = -7.54924077E-14,-0.382683843,-3.127E-14,0.923879564
+	rot = -7.54923942E-14,-0.382683903,-3.12699966E-14,0.923879564
 	attRot = 0,0,0,1
 	attRot0 = -6.48267857E-14,-0.60876143,-4.97433515E-14,0.793353319
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = 0
 	sqor = 6
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -9553,23 +9555,23 @@ PART
 {
 	part = rocketNoseCone.v3_4289873574
 	partName = Part
-	persistentId = 969163116
-	pos = -2.63108253,32.2559166,1.50218153
+	persistentId = 411238325
+	pos = -2.63108253,32.2559166,1.50218201
 	attPos = 0,0,0
 	attPos0 = 0,6.14614105,0
-	rot = -2.63548203E-14,0.382683843,-5.70616891E-14,-0.923879564
+	rot = -2.63548288E-14,0.382683903,-5.70616823E-14,-0.923879564
 	attRot = 0,0,0,1
 	attRot0 = 0,1.78813934E-07,0,-1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -9654,23 +9656,23 @@ PART
 {
 	part = strutConnector_4294531200
 	partName = CompoundPart
-	persistentId = 2304069931
-	pos = -1.81611717,23.3436184,0.578500807
+	persistentId = 4111089266
+	pos = -1.81611693,23.3436184,0.578501642
 	attPos = 0,0,0
 	attPos0 = -0.0768806636,-2.76615715,-1.22939825
-	rot = -4.98602546E-08,-0.866025507,2.87867774E-08,0.5
+	rot = -4.98602439E-08,-0.866025507,2.87867756E-08,0.5
 	attRot = 0,0,0,1
 	attRot0 = -3.50485898E-08,-0.60876143,4.56762059E-08,0.793353319
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -9704,10 +9706,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4294548770
-		tpersID = 3954197739
-		pos = -0.202540323,0.0497703776,-0.0694665983
-		rot = 0,-0.382683247,4.32167724E-09,0.923879623
-		dir = -0.921359658,0.226406321,-0.315969169
+		tpersID = 2509260884
+		pos = -0.202540889,0.0497703776,-0.069466956
+		rot = 9.64360775E-16,-0.382683337,4.32168257E-09,0.923879862
+		dir = -0.921349227,0.226403162,-0.316001981
 		col = collider
 	}
 	MODULE
@@ -9795,23 +9797,23 @@ PART
 {
 	part = radialDecoupler1-2_4289181216
 	partName = Part
-	persistentId = 1182751237
-	pos = 0.519828439,28.9235191,0.499568403
+	persistentId = 2884854700
+	pos = 0.5198282,28.9235191,0.499569118
 	attPos = 0,0,0
 	attPos0 = 0.877033472,-0.228111267,0.87703371
-	rot = 0,0.965925932,0,0.258818805
+	rot = 0,0.965926051,0,0.258818805
 	attRot = 0,0,0,1
 	attRot0 = 0,0.923879564,0,0.382683426
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 5
+	istg = 4
 	resPri = 0
 	dstg = 9
 	sidx = 0
 	sqor = 5
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -9945,23 +9947,23 @@ PART
 {
 	part = Thoroughbred_4289179378
 	partName = Part
-	persistentId = 2649613003
-	pos = 1.88942301,26.1097755,0.866550028
+	persistentId = 3911286599
+	pos = 1.88942254,26.1097755,0.866550863
 	attPos = -3.4570694E-06,-2.67663193,-4.76837158E-07
 	attPos0 = -1.36958694,-0.137111664,0.366980165
-	rot = -6.48268806E-14,0.60876137,4.97434193E-14,0.793353438
+	rot = -6.48268738E-14,0.60876137,4.97434193E-14,0.793353438
 	attRot = 0,0,0,1
 	attRot0 = -6.4826806E-14,-0.60876143,-4.97433448E-14,0.793353379
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = 0
 	sqor = 6
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -10193,23 +10195,23 @@ PART
 {
 	part = rocketNoseCone.v3_4289179238
 	partName = Part
-	persistentId = 4230657959
-	pos = 1.88942635,32.2559166,0.866558611
+	persistentId = 3992644766
+	pos = 1.88942492,32.2559166,0.866559088
 	attPos = 0,0,0
 	attPos0 = 0,6.14614105,0
-	rot = -6.25943186E-14,-0.60876137,-5.70680783E-15,-0.793353438
+	rot = -6.25943321E-14,-0.60876137,-5.70681587E-15,-0.793353438
 	attRot = 0,0,0,1
 	attRot0 = 0,1.78813934E-07,0,-1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -10294,23 +10296,23 @@ PART
 {
 	part = strutConnector_4294531086
 	partName = CompoundPart
-	persistentId = 608725435
-	pos = 0.682012796,23.3436184,0.622620761
+	persistentId = 244070530
+	pos = 0.682013035,23.3436184,0.622621119
 	attPos = 0,0,0
 	attPos0 = -0.076881066,-2.76615715,-1.22939873
-	rot = -2.46469511E-14,7.82310963E-08,5.75735868E-08,1
+	rot = -2.62012634E-14,7.82310963E-08,5.75735939E-08,1
 	attRot = 0,0,0,1
 	attRot0 = -3.50485898E-08,-0.608761609,4.56762059E-08,0.79335326
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -10344,10 +10346,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4294548770
-		tpersID = 3954197739
-		pos = -0.202549666,0.0497722849,-0.0694551691
-		rot = 0,-0.382681757,3.34194453E-07,0.923880279
-		dir = -0.921359658,0.226406321,-0.315969169
+		tpersID = 2509260884
+		pos = -0.202550039,0.0497722849,-0.0694554597
+		rot = 1.060072E-15,-0.382681757,3.34194482E-07,0.923880339
+		dir = -0.921368897,0.226406455,-0.315942168
 		col = collider
 	}
 	MODULE
@@ -10435,8 +10437,8 @@ PART
 {
 	part = radialDecoupler1-2_4289181158
 	partName = Part
-	persistentId = 3715393999
-	pos = -0.554315984,28.9235191,-1.3609035
+	persistentId = 458663076
+	pos = -0.554315984,28.9235191,-1.36090267
 	attPos = 0,0,0
 	attPos0 = 0.321016759,-0.228111267,-1.1980499
 	rot = 0,0.707106233,0,-0.707107365
@@ -10446,12 +10448,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 5
+	istg = 4
 	resPri = 0
 	dstg = 9
 	sidx = 0
 	sqor = 5
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -10585,23 +10587,23 @@ PART
 {
 	part = Thoroughbred_4289126684
 	partName = Part
-	persistentId = 3683487377
-	pos = -0.921298146,26.1097755,-2.73049331
+	persistentId = 2071861148
+	pos = -0.921298385,26.1097755,-2.73049235
 	attPos = -2.98023224E-06,-2.67663193,3.57627869E-07
 	attPos0 = -1.36958659,-0.137111664,0.366979361
-	rot = 1.06656102E-14,0.991444886,8.10133685E-14,-0.130526319
+	rot = 1.06656068E-14,0.991444886,8.10133685E-14,-0.130526319
 	attRot = 0,0,0,1
 	attRot0 = -6.48268128E-14,-0.60876143,-4.97433448E-14,0.793353438
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = 0
 	sqor = 6
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -10833,23 +10835,23 @@ PART
 {
 	part = rocketNoseCone.v3_4289126554
 	partName = Part
-	persistentId = 2315995239
-	pos = -0.92129463,32.2559166,-2.73049664
+	persistentId = 490400025
+	pos = -0.921294928,32.2559166,-2.73049545
 	attPos = 0,0,0
 	attPos0 = 0,6.14614105,0
-	rot = -3.62394576E-14,-0.991444886,5.13549977E-14,0.130526319
+	rot = -3.62394508E-14,-0.991444886,5.13549876E-14,0.130526319
 	attRot = 0,0,0,1
 	attRot0 = 0,1.78813934E-07,0,-1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
@@ -10934,8 +10936,8 @@ PART
 {
 	part = strutConnector_4294531476
 	partName = CompoundPart
-	persistentId = 385315263
-	pos = -0.528842151,23.3436184,-1.56288004
+	persistentId = 2711993097
+	pos = -0.528842092,23.3436184,-1.56287861
 	attPos = 0,0,0
 	attPos0 = -0.0768806934,-2.76615715,-1.22939861
 	rot = 4.98602333E-08,0.866025448,2.87868396E-08,0.5
@@ -10945,12 +10947,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 6
+	istg = 5
 	resPri = 0
 	dstg = 10
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -10984,10 +10986,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4294548770
-		tpersID = 3954197739
-		pos = -0.202543736,0.0497684702,-0.0694588721
-		rot = 0,-0.382684797,-4.70711882E-07,0.923878968
-		dir = -0.921359658,0.226406321,-0.315969169
+		tpersID = 2509260884
+		pos = -0.202544481,0.0497684702,-0.0694589093
+		rot = 5.27372242E-15,-0.382684827,-4.70711939E-07,0.923879087
+		dir = -0.921364129,0.226394132,-0.315964907
 		col = collider
 	}
 	MODULE
@@ -11075,8 +11077,8 @@ PART
 {
 	part = strutConnector_4294534088
 	partName = CompoundPart
-	persistentId = 735761322
-	pos = -0.615145564,31.8186741,-1.36077428
+	persistentId = 68867651
+	pos = -0.615145624,31.8186741,-1.36077332
 	attPos = 0,0,0
 	attPos0 = 0.262227446,2.66704369,-1.21366978
 	rot = 0,0.70710659,0,-0.707107008
@@ -11086,12 +11088,12 @@ PART
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -11125,10 +11127,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4289126684
-		tpersID = 3683487377
-		pos = -0.165749744,0.090675354,-0.0233317036
-		rot = 0,0.258818954,-2.78202663E-07,0.965925872
-		dir = -0.870669961,0.476339966,-0.122612983
+		tpersID = 2071861148
+		pos = -0.165749118,0.090675354,-0.0233318079
+		rot = -5.96449854E-15,0.258818984,-2.78202691E-07,0.965925932
+		dir = -0.870687187,0.476321489,-0.122562982
 		col = Col
 	}
 	MODULE
@@ -11216,23 +11218,23 @@ PART
 {
 	part = strutConnector_4294531802
 	partName = CompoundPart
-	persistentId = 1531974438
-	pos = -1.59793234,31.8186741,0.552184403
+	persistentId = 1138973237
+	pos = -1.59793186,31.8186741,0.552185595
 	attPos = 0,0,0
 	attPos0 = -1.18218243,2.66704369,0.379739672
-	rot = 0,-0.258819014,0,-0.965925872
+	rot = 0,-0.258819073,0,-0.965925932
 	attRot = 0,0,0,1
 	attRot0 = 0,-0.130526289,0,-0.991444886
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -11266,10 +11268,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4289887010
-		tpersID = 1551775771
-		pos = -0.165757477,0.0906772614,-0.023330532
-		rot = 0,0.258818835,-4.5263215E-07,0.965925932
-		dir = -0.870669961,0.476339966,-0.122612983
+		tpersID = 3759163596
+		pos = -0.165756464,0.0906772614,-0.0233306531
+		rot = 1.16033841E-14,0.258818984,-4.52632435E-07,0.965926528
+		dir = -0.870692968,0.476313591,-0.122552298
 		col = Col
 	}
 	MODULE
@@ -11357,23 +11359,23 @@ PART
 {
 	part = strutConnector_4294531688
 	partName = CompoundPart
-	persistentId = 159728040
-	pos = 0.550132275,31.8186741,0.446826398
+	persistentId = 3019951283
+	pos = 0.550131559,31.8186741,0.446827352
 	attPos = 0,0,0
 	attPos0 = 0.919955432,2.66704369,0.833930671
-	rot = 0,-0.965925932,0,-0.258818805
+	rot = 0,-0.965926051,0,-0.258818805
 	attRot = 0,0,0,1
 	attRot0 = 0,-0.923879623,0,-0.382683337
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 4
+	istg = 3
 	resPri = 0
 	dstg = 8
 	sidx = -1
 	sqor = -1
-	sepI = 4
+	sepI = 3
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -11407,10 +11409,10 @@ PART
 	PARTDATA
 	{
 		tgt = 4289179378
-		tpersID = 2649613003
-		pos = -0.165761054,0.0906848907,-0.0233421251
-		rot = 0,0.258817375,-1.87582543E-07,0.96592629
-		dir = -0.870669961,0.476339966,-0.122612983
+		tpersID = 3911286599
+		pos = -0.165760905,0.0906848907,-0.0233421177
+		rot = 7.15268237E-16,0.258817464,-1.87582614E-07,0.965926647
+		dir = -0.870675623,0.476331413,-0.122606792
 		col = Col
 	}
 	MODULE
@@ -11496,31 +11498,305 @@ PART
 }
 PART
 {
-	part = largeSolarPanel_4289940348
+	part = commDish_4293238348
 	partName = Part
-	persistentId = 959142514
-	pos = -0.55431658,36.4550323,1.09115434
+	persistentId = 3733077094
+	pos = -1.89249611,37.6647644,-0.120591521
 	attPos = 0,0,0
-	attPos0 = -5.70863676E-08,-0.421592712,1.21174645
-	rot = -6.87176893E-08,0.707106709,-6.87177248E-08,0.707107067
+	attPos0 = -1.33817935,0.788139343,3.25074552E-07
+	rot = 0.5,-0.500000119,0.500000119,0.5
 	attRot = 0,0,0,1
-	attRot0 = -6.87176751E-08,0.70710665,-6.87177035E-08,0.707106948
+	attRot0 = 0.49999994,-0.500000119,0.500000119,0.49999994
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = largeSolarPanel_4293540922
+	sym = commDish_4293230660
+	srfN = srfAttach,Rockomax16.BW_4290024166,collider,0|-0.129999995|0,0|-1|0,0|-0.129999995|0
+	attN = bottom,Null_0_0|-0.129999995|0_0|-1|0_0|-0.129999995|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableAntenna
+		isEnabled = True
+		currentRotation = (-0.707106829, 0, 0, 0.707106829)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = RETRACTED
+		stagingEnabled = True
+		destroyOnBreakObject = Sphere001
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = commDish_4293230660
+	partName = Part
+	persistentId = 843463104
+	pos = 0.783862591,37.6647644,-0.120592356
+	attPos = 0,0,0
+	attPos0 = 1.33817947,0.788139343,-2.69238626E-07
+	rot = 0.500000119,0.5,-0.5,0.500000119
+	attRot = 0,0,0,1
+	attRot0 = 0.500000119,0.49999994,-0.49999994,0.500000119
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = commDish_4293238348
+	srfN = srfAttach,Rockomax16.BW_4290024166,collider,0|-0.129999995|0,0|-1|0,0|-0.129999995|0
+	attN = bottom,Null_0_0|-0.129999995|0_0|-1|0_0|-0.129999995|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableAntenna
+		isEnabled = True
+		currentRotation = (-0.707106829, 0, 0, 0.707106829)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 1
+		deployState = RETRACTED
+		stagingEnabled = True
+		destroyOnBreakObject = Sphere001
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = KOSNameTag
+		isEnabled = True
+		nameTag = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = largeSolarPanel_4289940348
+	partName = Part
+	persistentId = 1215128205
+	pos = -0.554316401,36.8353271,1.08681893
+	attPos = 0,0,0
+	attPos0 = 1.89590821E-07,-0.0412979126,1.20741081
+	rot = -6.87176751E-08,0.707106829,-6.87176893E-08,0.707106948
+	attRot = 0,0,0,1
+	attRot0 = -6.87176751E-08,0.707106709,-6.87176964E-08,0.707106948
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = largeSolarPanel_4293229598
 	srfN = srfAttach,Rockomax16.BW_4290024166,collider,0|0|0,1|0|0,0|0|0
 	EVENTS
 	{
@@ -11613,25 +11889,25 @@ PART
 }
 PART
 {
-	part = largeSolarPanel_4293540922
+	part = largeSolarPanel_4293229598
 	partName = Part
-	persistentId = 3446010904
-	pos = -0.554316759,36.4550323,-1.33233786
+	persistentId = 583593398
+	pos = -0.554317117,36.8353271,-1.32800257
 	attPos = 0,0,0
-	attPos0 = -9.14488965E-08,-0.421592712,-1.2117461
-	rot = -6.87177248E-08,0.707107067,6.87176893E-08,-0.707106709
+	attPos0 = -4.21686678E-07,-0.0412979126,-1.20741069
+	rot = -6.87176893E-08,0.707106888,6.87176751E-08,-0.707106769
 	attRot = 0,0,0,1
-	attRot0 = -6.87177035E-08,0.707106948,6.87176751E-08,-0.707106709
+	attRot0 = -6.87176964E-08,0.707106888,6.87176751E-08,-0.707106769
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
 	dstg = 6
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 1
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
@@ -11730,32 +12006,32 @@ PART
 }
 PART
 {
-	part = commDish_4292911400
+	part = longAntenna_4293223796
 	partName = Part
-	persistentId = 983028187
-	pos = 0.783089042,37.7065773,-0.120592535
-	attPos = 0,0,0
-	attPos0 = 1.33740568,0.82995224,2.94742222E-08
-	rot = 0.500000119,0.499999911,-0.499999911,0.500000119
+	persistentId = 4231774673
+	pos = -0.0887053013,43.2289886,1.10399795
+	attPos = 0.0822064579,-0.204325855,0.0619240105
+	attPos0 = 0.120018557,0.461143821,-0.447915167
+	rot = 0.716686428,0.0237252451,-0.0237253085,0.696588337
 	attRot = 0,0,0,1
-	attRot0 = 0.500000119,0.499999881,-0.499999881,0.500000119
+	attRot0 = 1.29922997E-08,0.292253286,1.18718972E-07,0.956341028
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
 	rigidAttachment = False
-	istg = 2
+	istg = 1
 	resPri = 0
-	dstg = 6
+	dstg = 3
 	sidx = -1
 	sqor = -1
-	sepI = 2
+	sepI = 0
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,Rockomax16.BW_4290024166,collider,0|-0.129999995|0,0|-1|0,0|-0.129999995|0
-	attN = bottom,Null_0_0|-0.129999995|0_0|-1|0_0|-0.129999995|0_0|-1|0
+	srfN = srfAttach,parachuteLarge_4294478222,collider,0|0|0,0|-1|0,0|0|0
+	attN = bottom,Null_0_0|0|0_0|-1|0_0|0|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -11786,7 +12062,6 @@ PART
 		storedAnimationSpeed = 1
 		deployState = RETRACTED
 		stagingEnabled = True
-		destroyOnBreakObject = Sphere001
 		EVENTS
 		{
 		}
