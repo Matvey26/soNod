@@ -55,8 +55,8 @@ control.activate_next_stage()
 # Мы вылетели из атмосферы кербина (NEXT STEP)
 
 # Получение конкертной антенны и солнечной панели
-antennas = vessel.parts.with_name('Communotron 88-88')
-solar_pannels = vessel.parts.with_name('Gigantor XL Solar Array')
+antennas = vessel.parts.with_tag('com1')
+solar_pannels = vessel.parts.with_tag('Pan1')
 
 # Включение
 antennas[0].deployed = True
