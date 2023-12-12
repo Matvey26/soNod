@@ -11,7 +11,9 @@ ap = vessel.auto_pilot  # работать с автопилотом
 ap.target_pitch_and_heading(90, 90)
 ap.engage()
 
+stage_4_resources = vessel.resources_in_decouple_stage(stage=4, cumulative=False)
 ut = conn.add_stream(getattr, conn.space_center, 'ut')
+srb_fuel = conn.add_stream(stage_4_resources.amount, 'SolidFuel')  
 altitude = conn.add_stream(getattr, vessel.flight(), 'mean_altitude')
 apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')
@@ -42,7 +44,7 @@ print(angle(50_000), angle(100_000))
 while apoapsis() < pos1[0]:
    time.sleep(0.5)  
 
-while apoapsis() < pos2[0]:
+while srb_fuel() >= 0.01:
     print(apoapsis(), angle(apoapsis()))
     ap.target_pitch = angle(apoapsis())
     time.sleep(0.1)
@@ -99,7 +101,7 @@ lead_time = 5
 # Executing burn
 print("Ща запустим двигатели")
 time_to_apoapsis = conn.add_stream(getattr, vessel.orbit, "time_to_apoapsis")
-while time_to_apoapsis() - (burn_time/2) > 0:
+while time_to_apoapsis() - (burn_time / 2) > 0:
 	time.sleep(0.05)
     
 print("Запускаем двигатели")
