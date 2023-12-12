@@ -55,14 +55,15 @@ control.activate_next_stage()
 # Мы вылетели из атмосферы кербина (NEXT STEP)
 
 # Получение конкертной антенны и солнечной панели
-antennas = vessel.parts.with_tag('com1')
-solar_pannels = vessel.parts.with_tag('Pan1')
+#antennas = vessel.parts.with_tag('com1')
+#solar_pannels = vessel.parts.with_tag('Pan1')
 
 # Включение
-antennas[0].deployed = True
-antennas[1].deployed = True
-solar_pannels[0].deployed = True
-solar_pannels[1].deployed = True
+antennas = vessel.parts.antennas
+solar_pannels = vessel.parts.solar_panels
+
+for s in solar_pannels:
+    s.deployed = True
 
 print("автопилот установлен на pitch = 0...")
 ap.target_pitch = 0
