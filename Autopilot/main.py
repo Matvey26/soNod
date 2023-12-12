@@ -48,13 +48,15 @@ while apoapsis() < pos1[0]:
 while srb_fuel() >= 0.01:
     print(apoapsis(), angle(apoapsis()))
     ap.target_pitch = angle(apoapsis())
-    time.sleep(0.1)
+    time.sleep(0.2)
+
+control.activate_next_stage()
 
 # Мы вылетели из атмосферы кербина (NEXT STEP)
 
 # Получение конкертной антенны и солнечной панели
-antennas = vessel.parts.with_title('Communotron 88-88')
-solar_pannels = vessel.parts.with_title('Gigantor XL Solar Array')
+antennas = vessel.parts.with_name('Communotron 88-88')
+solar_pannels = vessel.parts.with_name('Gigantor XL Solar Array')
 
 # Включение
 antennas[0].deployed = True
