@@ -23,7 +23,7 @@ def OrbitFunction(rocket: Rocket.Rocket) -> tuple:
     X, Y = [pos[0]], [pos[1]]
 
     t = 0
-    semi_major = 1/(2/math.sqrt((pos[0] - xc) ** 2 + (pos[1] - yc) ** 2) - (vel[0] ** 2 + vel[1] ** 2) / mu)
+    semi_major = 1 / (2 / math.sqrt((pos[0] - xc) ** 2 + (pos[1] - yc) ** 2) - (vel[0] ** 2 + vel[1] ** 2) / mu)
     duration = 2 * math.pi * math.sqrt(semi_major ** 3 / mu)  # период вращения по орбите
     dt = duration / 1000
     while t <= duration:
@@ -88,7 +88,6 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
     is_apoasis_reached = False
 
     t = 0
-    DELTA_V = (0, 0)
     while t <= stage_live_duration:
         # Считаем ускорение тела в момент времени t
         r = math.sqrt((rocket.position[0] - xc) ** 2 + (rocket.position[1] - yc) ** 2)
@@ -107,7 +106,6 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         
         # Считаем скорость в момент времени t + 1
         rocket.velocity = [rocket.velocity[0] + a[0] * dt, rocket.velocity[1] + a[1] * dt]
-        DELTA_V = DELTA_V[0] + rocket.velocity[0], DELTA_V[1] + rocket.velocity[1]
 
         # Считаем координаты ракеты в момент времени t + 1
         rocket.position = [rocket.position[0] + rocket.velocity[0] * dt, rocket.position[1] +rocket.velocity[1] * dt]
@@ -133,8 +131,8 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         Y.append(rocket.position[1])
 
         t += dt
-        
-    print(f'Для этой ступени имеем дельта v: {math.sqrt(DELTA_V[0] ** 2 + DELTA_V[1] ** 2) / t} в проекциях {DELTA_V[0] / t, DELTA_V[1] / t}')
+    else:
+        print('мы так и не достигли апоцентра')
     
     return X, Y
 

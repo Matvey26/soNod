@@ -2,11 +2,14 @@ import math
 
 
 class Rocket:
-    def __init__(self, angle_height):
+    def __init__(self, start_angle: tuple, end_angle: tuple):
         self.stages = []  # ступени расположены в привычном порядке. 0 индекс это 1-я ступень
         self.position, self.velocity = (0, 0), (0, 0)  # последние сохранённые позиция и вектор скорости
         self.current_mass = 0  # последняя сохранённая масса ракеты, используйте GetLastMass для получения этого параметра
-        self.beta = math.pi / (2 * angle_height)
+        # start_angle это кортеж вида: (начальное значение аргумента, начальный угол)
+        # end_angle это такой же кортеж, но конечные аргумент и угол
+        self.k_angle = (end_angle[1] - start_angle[1]) / (end_angle[0] - start_angle[0])
+        self.b_angle = start_angle[1] - start_angle[0] * self.k_angle
 
     
     def CreateStage(self, stage):
@@ -36,11 +39,12 @@ class Rocket:
                 b += i[0]
         
         return a / b
-    
 
-    def GetAngle(self, height):
-        '''зависимость угла наклона [рад] от высоты полёта'''
-        return max(min(height * self.beta, math.pi / 2), 0)
+
+
+    def GetAngle(self, x):
+        '''зависимость угла (между вертикалью и направлением полёта) наклона [рад] от высоты полёта'''
+        return min(max(self.k_angle * x + self.b_angle, 0), math.pi / 2)
 
 
 class Stage:
