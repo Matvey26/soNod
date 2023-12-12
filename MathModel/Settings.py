@@ -5,4 +5,4 @@ mu = 3.5316 * 10 ** 12
 g = 9.81
 
 # Параметры, связанные с полётом
-target_apoasis = 100_000 + KERBIN_RADIUS
+target_apoapsis = 100_000 + KERBIN_RADIUS

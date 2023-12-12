@@ -52,7 +52,7 @@ def OrbitFunction(rocket: Rocket.Rocket) -> tuple:
 
         t += dt
 
-    return (X, Y), Ap, Pr, state_Ap, state_Pr
+    return (X, Y), (Ap, state_Ap), (Pr, state_Pr)
 
 
 # формула была выведена для координат Кербина (0, -600_000)
@@ -90,13 +90,15 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
     t = 0
     while t <= stage_live_duration:
         # Считаем ускорение тела в момент времени t
-        r = math.sqrt((rocket.position[0] - xc) ** 2 + (rocket.position[1] - yc) ** 2)
+        radius_vector = rocket.position[0] - xc, rocket.position[1] - yc  # радиус вектор до ракеты
+        r = math.sqrt(radius_vector[0] ** 2 + radius_vector[1] ** 2)
+        velocity_vector = rocket.velocity  # вектор скорости ракеты 
+        velocity = math.sqrt(velocity_vector[0] ** 2 + velocity_vector[1] ** 2)
 
         height = r - Settings.KERBIN_RADIUS
         angle = rocket.GetAngle(height)
         press = Physics.Pressure(height)
         thrust = stage.GetThrust(press)
-        velocity = math.sqrt(rocket.velocity[0] ** 2 + rocket.velocity[1] ** 2)
         mass = stage.GetMass(t)
         drag = Physics.Drag(Physics.Density(press), velocity, rocket.GetDragCoef(), mass)
 
@@ -110,22 +112,25 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         # Считаем координаты ракеты в момент времени t + 1
         rocket.position = [rocket.position[0] + rocket.velocity[0] * dt, rocket.position[1] +rocket.velocity[1] * dt]
 
-        # Смотрим на высоту апоцентра
-        if not is_apoasis_reached and height > 10_000:
-            graph, Ap, Pr, ap_state, _ = OrbitFunction(rocket)
-            if Ap >= Settings.target_apoasis and ap_state[0][0] > 0:
-                print(f't: {t}, Ap: {Ap:.3f}, Pr: {Pr:.3f}', f'ap_pos: {ap_state[0]}, ap_vel: {ap_state[1]}')
-                print(f'Delta v_2 is {math.sqrt(mu / Ap) * (1 - math.sqrt(Pr / ((Ap + Pr) / 2)))}')
-                print(f'Двигатель нужно отключить на высоте {r - Settings.KERBIN_RADIUS}')
-                is_apoasis_reached = True
+        # Считаем необходимые величины для поиска апоцентра
+        h_squared = (radius_vector[0] * velocity_vector[1] - radius_vector[1] * velocity_vector[0]) ** 2  # specific relative angular momentum в квадрате
+        epsilon = (velocity ** 2) / 2 - mu / r  # specific orbital energy
+        eccentricity = math.sqrt(1 + 2 * epsilon * h_squared / (mu ** 2))  # эксцентриситет
+        semi_major = 1 / (2 / math.sqrt(radius_vector[0] ** 2 + radius_vector[1] ** 2) - (velocity_vector[0] ** 2 + velocity_vector[1] ** 2) / mu)
 
-                # prcnt = round(len(graph[0]) * 30 / 100)
-                plt.plot(graph[0], graph[1])
+        apoapsis = (1 + eccentricity) * semi_major
+        periapsis = (1 - eccentricity) * semi_major
 
-                plt.scatter(x=[ap_state[0][0]], y=[ap_state[0][1]])
-                plt.scatter(x=[rocket.position[0]], y=[rocket.position[1]])
+        if apoapsis >= Settings.target_apoapsis:
+            print(f'Двигатели нужно выключить на высоте {height} м')
+            delta_v = math.sqrt(mu / apoapsis) * (1 - math.sqrt(periapsis / semi_major))
+            print(f'При этом в апоцентре нужно будет ускориться на дельту {delta_v} м/с')
+            graph, _, _ = OrbitFunction(rocket)
 
-                break
+            plt.plot(graph[0], graph[1])
+
+            break
+            
 
         X.append(rocket.position[0])
         Y.append(rocket.position[1])
@@ -134,5 +139,7 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
     else:
         print('мы так и не достигли апоцентра')
     
+    print(f'Масса ракеты под конец работы двигателей {rocket.GetLastMass()}')
+
     return X, Y
 
