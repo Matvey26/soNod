@@ -11,9 +11,9 @@ ap = vessel.auto_pilot  # работать с автопилотом
 ap.target_pitch_and_heading(90, 90)
 ap.engage()
 
-stage_4_resources = vessel.resources_in_decouple_stage(stage=4, cumulative=False)
+stage_5_resources = vessel.resources_in_decouple_stage(stage=5, cumulative=False)
 ut = conn.add_stream(getattr, conn.space_center, 'ut')
-srb_fuel = conn.add_stream(stage_4_resources.amount, 'SolidFuel')  
+srb_fuel = conn.add_stream(stage_5_resources.amount, 'SolidFuel')  
 altitude = conn.add_stream(getattr, vessel.flight(), 'mean_altitude')
 apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')
@@ -49,6 +49,16 @@ while srb_fuel() >= 0.01:
     print(apoapsis(), angle(apoapsis()))
     ap.target_pitch = angle(apoapsis())
     time.sleep(0.1)
+
+# Мы вылетели из атмосферы кербина (NEXT STEP)
+
+# Получение конкертной антенны и солнечной панели
+specific_antenna = vessel.parts.with_name('Communotron 88-88').antennas[0]
+specific_panel = vessel.parts.with_name('Gigantor XL Solar Array').solar_panels[0]
+
+# Включение
+specific_antenna.deployed = True
+specific_panel.deployed = True
 
 
 print("автопилот установлен на pitch = 0...")
