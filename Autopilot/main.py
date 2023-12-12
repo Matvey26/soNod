@@ -53,13 +53,14 @@ while srb_fuel() >= 0.01:
 # Мы вылетели из атмосферы кербина (NEXT STEP)
 
 # Получение конкертной антенны и солнечной панели
-specific_antenna = vessel.parts.with_name('Communotron 88-88').antennas[0]
-specific_panel = vessel.parts.with_name('Gigantor XL Solar Array').solar_panels[0]
+antennas = vessel.parts.with_title('Communotron 88-88')
+solar_pannels = vessel.parts.with_title('Gigantor XL Solar Array')
 
 # Включение
-specific_antenna.deployed = True
-specific_panel.deployed = True
-
+antennas[0].deployed = True
+antennas[1].deployed = True
+solar_pannels[0].deployed = True
+solar_pannels[1].deployed = True
 
 print("автопилот установлен на pitch = 0...")
 ap.target_pitch = 0
