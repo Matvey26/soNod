@@ -2,10 +2,11 @@ import math
 
 
 class Rocket:
-    def __init__(self):
+    def __init__(self, angle_height):
         self.stages = []  # ступени расположены в привычном порядке. 0 индекс это 1-я ступень
         self.position, self.velocity = (0, 0), (0, 0)  # последние сохранённые позиция и вектор скорости
         self.current_mass = 0  # последняя сохранённая масса ракеты, используйте GetLastMass для получения этого параметра
+        self.beta = math.pi / (2 * angle_height)
 
     
     def CreateStage(self, stage):
@@ -35,10 +36,15 @@ class Rocket:
                 b += i[0]
         
         return a / b
+    
+
+    def GetAngle(self, height):
+        '''зависимость угла наклона [рад] от высоты полёта'''
+        return max(min(height * self.beta, math.pi / 2), 0)
 
 
 class Stage:
-    def __init__(self, thrust_start, thrust_end, mass_start, mass_end, drag_coefs, fuel_consumption, fuel_amount, angle_height):
+    def __init__(self, thrust_start, thrust_end, mass_start, mass_end, drag_coefs, fuel_consumption, fuel_amount):
         self.T0, self.T1 = thrust_start, thrust_end  # тяга в вакууме, тяга у земли
         self.dT = self.T1 - self.T0
 
@@ -47,14 +53,7 @@ class Stage:
         self.duration = fuel_amount / fuel_consumption
         self.kM = (self.M1 - self.M0) / self.duration
 
-        self.beta = math.pi / (2 * angle_height)
-
         self.drag_coefs = drag_coefs  # массив вида [(масса детали в тоннах, её коэффициент сопротивления), ...]
-    
-
-    def GetAngle(self, height):
-        '''зависимость угла наклона [рад] от высоты полёта'''
-        return min(height * self.beta, 90)
     
 
     def GetThrust(self, press):
