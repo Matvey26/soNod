@@ -55,12 +55,12 @@ control.activate_next_stage()
 # Мы вылетели из атмосферы кербина (NEXT STEP)
 
 # Получение конкертной антенны и солнечной панели
-#antennas = vessel.parts.with_tag('com1')
-#solar_pannels = vessel.parts.with_tag('Pan1')
-
-# Включение
 antennas = vessel.parts.antennas
 solar_pannels = vessel.parts.solar_panels
+
+# Включение
+for a in antennas:
+    a.deployed = True
 
 for s in solar_pannels:
     s.deployed = True
