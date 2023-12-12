@@ -43,7 +43,7 @@ b = pos1[1] - pos1[0] * k
 
 # сама функция угла
 def angle(ap):
-  return min(max(k * ap + b, 0), pos2[1])
+  return k * ap + b
 
 
 """
@@ -59,7 +59,7 @@ while apoapsis() < pos1[0]:
 
 # наклоняем ракету до тех пор, пока топливо в тту не закончится
 while srb_fuel() >= 0.01:
-    print(apoapsis(), angle(apoapsis()))
+    # print(apoapsis(), angle(apoapsis()))
     ap.target_pitch = angle(apoapsis())
     time.sleep(0.2)
 ap.target_pitch = 0
@@ -104,6 +104,7 @@ def test3(mu, r1, r2):
     # dv2 - на Такое значение нужно увеличить скорость, будучи на переходной траектории гомана (высота апоцентра это r2)
     return dv1, dv2
 
+time.sleep(3)
 
 print("Добавляем ноду манёвра")
 mu = vessel.orbit.body.gravitational_parameter
