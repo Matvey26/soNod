@@ -11,6 +11,7 @@ ap = vessel.auto_pilot  # работать с автопилотом
 ap.target_pitch_and_heading(90, 90)
 ap.engage()
 
+ut = conn.add_stream(getattr, conn.space_center, 'ut')
 altitude = conn.add_stream(getattr, vessel.flight(), 'mean_altitude')
 apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')
@@ -35,11 +36,11 @@ b = pos1[1] - pos1[0] * k
 def angle(ap):
   return k * ap + b
 
+
 print(angle(50_000), angle(100_000))
 
 while apoapsis() < pos1[0]:
    time.sleep(0.5)  
-
 
 while apoapsis() < pos2[0]:
     print(apoapsis(), angle(apoapsis()))
@@ -64,11 +65,12 @@ def test3(mu, r1, r2):
 
 
 # Planning circularization burn (using vis-viva equation)
-print('Добавляем ноду манёвра')
+print("Добавляем ноду манёвра")
 mu = vessel.orbit.body.gravitational_parameter
 delta_v = test3(mu, vessel.orbit.periapsis, vessel.orbit.apoapsis)[1]
 node = control.add_node(ut() + vessel.orbit.time_to_apoapsis, prograde=delta_v)
 
+time.sleep(1)
 
 # Calculating burn time (using rocket equation)
 print("Считаем время работы двигателя")
@@ -81,27 +83,31 @@ burn_time = (m0 - m1) / flow_rate
  
 # Orientating the ship
 ap.disengage()
-print('Выключаем автопилот')
+print("Выключаем автопилот")
 control.sas = True
-print('Включаем САС')
+print("Включаем САС")
 time.sleep(1)
 control.sas_mode = conn.space_center.SASMode.prograde
-print('Ставим САС на прогрейд')
+print("Ставим САС на прогрейд")
 
 # Waiting until burn
-print('Ускоряем время до момента, когда мы ускоряться будем')
+print("Ускоряем время до момента, когда мы ускоряться будем")
 burn_ut = ut() + vessel.orbit.time_to_apoapsis - (burn_time/2)
 lead_time = 5
-conn.space_center.warp_to(burn_ut - lead_time)
+# conn.space_center.warp_to(burn_ut - lead_time)
 
 # Executing burn
-print('Ща запустим двигатели')
-time_to_apoapsis = conn.add_stream(getattr, vessel.orbit, 'time_to_apoapsis')
+print("Ща запустим двигатели")
+time_to_apoapsis = conn.add_stream(getattr, vessel.orbit, "time_to_apoapsis")
 while time_to_apoapsis() - (burn_time/2) > 0:
-	pass
-print('Запускаем двигатели')
+	time.sleep(0.05)
+    
+print("Запускаем двигатели")
 control.throttle = 1.0
-time.sleep(burn_time)
-print('The vessel is successfully parked at ', target_altitude // 1000,' km orbit')
+time_when_end = ut() + vessel.orbit.time_to_apoapsis + burn_time / 2
+print(time_when_end - ut())
+while time_when_end - ut() > 0:
+    time.sleep(0.05)
+print("The vessel is successfully parked at 100km orbit")
 control.throttle = 0
 control.remove_nodes()
