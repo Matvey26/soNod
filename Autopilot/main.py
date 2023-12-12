@@ -19,6 +19,7 @@ apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')
 pitch = conn.add_stream(getattr, vessel.flight(), 'pitch')
 
+
 # запускаем ракету
 print("3...")
 time.sleep(0.5)
