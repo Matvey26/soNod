@@ -60,10 +60,12 @@ solar_pannels = vessel.parts.solar_panels
 
 # Включение
 for a in antennas:
-    a.deployed = True
+    if a.deployable:
+        a.deployed = True
 
 for s in solar_pannels:
-    s.deployed = True
+    if s.deployable:
+        s.deployed = True
 
 print("автопилот установлен на pitch = 0...")
 ap.target_pitch = 0
