@@ -68,6 +68,3 @@ t_days = t_sec / (3600 * 6)
 t_years = t_days // 426.08
 t_days -= t_years * 426.08
 print(f"Через {t_years} лет и {t_days} дней нужно запускать ракету")
-
-day = 6 * 60 * 60
-# conn.space_center.warp_to(ut() + t_sec - 2 * day)
