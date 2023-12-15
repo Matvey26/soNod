@@ -1,6 +1,9 @@
 import krpc
 import time
 import math
+import threading
+
+import logger as log
 
 conn = krpc.connect()  # подключаемся к серверу 
 vessel = conn.space_center.active_vessel  # активный корабль
@@ -20,6 +23,10 @@ apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')  # выс
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')  # высота перицентра в метрах, если счтиать от уровня моря
 pitch = conn.add_stream(getattr, vessel.flight(), 'pitch')  # рысканье ракеты
 
+# создаем отдельный поток для логирования
+log_file = log.create_log_file()
+log_thread = threading.Thread(target=log.collect_data_and_log, args=(vessel, log_file,))
+log_thread.start()
 
 # запускаем ракету
 print("3...")
@@ -77,7 +84,7 @@ print("Ускорители отброшены")
     1. Открыть солнечные панели
     2. Набрать необходимую дельта скорость
 """
-# Получение конкертной антенны и солнечной панели
+# Получение конкретной антенны и солнечной панели
 antennas = vessel.parts.antennas
 solar_pannels = vessel.parts.solar_panels
 
