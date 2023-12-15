@@ -27,7 +27,7 @@ def angle_between_2_vectors(v1, v2):
     r1 = length_of_vector(v1)
     r2 = length_of_vector(v2)
     scalar = sum([v1[i] * v2[i] for i in range(3)])
-    return math.degrees(math.acos(scalar / (r1 * r2)))
+    return math.acos(scalar / (r1 * r2))
 
 
 def vector_minus_vector(v1, v2):
@@ -41,11 +41,17 @@ Duna = Sun.satellites[3]
 while True:
     vessel_pos = vessel.position(Sun_rf)
     kerbin_pos = Kerbin.position(Sun_rf)
+    kebin_vel = Kerbin.velocity(Sun_rf)
     duna_pos = Duna.position(Sun_rf)
     # Считаем фазовый угол между Дюной и Кербином
     phase_angle = angle_between_2_vectors(kerbin_pos, duna_pos)
     # Считаем угол для вылета из SOI
-    theta = 180 - angle_between_2_vectors(kerbin_pos, vector_minus_vector(vessel_pos, kerbin_pos))
+    theta = math.pi - angle_between_2_vectors(kebin_vel, vector_minus_vector(vessel_pos, kerbin_pos))
+
+    w_kerbin = 2 * math.pi / 9_203_545  # Угловая скорость Кербина
+    w_duna = 2 * math.pi / 17_315_400  # Угловая скорость
+    t_days = ((phase_angle - math.radians(44.36)) / (w_kerbin - w_duna)) / (60 * 60 * 6)
+
     # Так как угол тета берётся по модулю, нужно учесть, что ракета должна находиться от Солцна дальше, чем Кербин
     if length_of_vector(kerbin_pos) < length_of_vector(vessel_pos):
         if phase_angle == 44.36 and theta == 150.36:

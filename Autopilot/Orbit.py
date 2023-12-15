@@ -20,7 +20,6 @@ apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')  # выс
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')  # высота перицентра в метрах, если счтиать от уровня моря
 pitch = conn.add_stream(getattr, vessel.flight(), 'pitch')  # рысканье ракеты
 
-
 # запускаем ракету
 print("3...")
 time.sleep(0.5)
@@ -109,6 +108,7 @@ time.sleep(3)
 print("Добавляем ноду манёвра")
 mu = vessel.orbit.body.gravitational_parameter
 delta_v = test3(mu, vessel.orbit.periapsis, vessel.orbit.apoapsis)[1]
+need_v = math.sqrt(mu / 700_000)
 node = control.add_node(ut() + vessel.orbit.time_to_apoapsis, prograde=delta_v)
 time.sleep(1)
 
@@ -137,9 +137,13 @@ while time_to_apoapsis() - (burn_time / 2) > 0:
     
 print("Запускаем двигатели")
 control.throttle = 1.0
-time_when_end = ut() + vessel.orbit.time_to_apoapsis + burn_time / 2
+time_when_end = ut() + vessel.orbit.time_to_apoapsis + burn_time / 2 + 1
 print(time_when_end - ut())
-while time_when_end - ut() > 0:
+ref_frame = vessel.orbit.body.reference_frame
+print(vessel.velocity(ref_frame))
+vel = vessel.velocity(ref_frame)
+while time_when_end - ut() > 0 or math.sqrt(vel[0] ** 2 + vel[1] ** 2 + vel[2] ** 2) > 3:
+    vel = vessel.velocity(ref_frame)
     time.sleep(0.05)
 
 print("Ракета успешно выведена на орбиту 100 км")
