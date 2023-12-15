@@ -12,14 +12,16 @@ FuelAmount = 8000  # количество твёрдого топлива [ед_
 ALL_PARAMETERS_1 = (T0, T1, M0, M1, drag_coefs, FuelConsumption, FuelAmount)
 
 # Создаём тестовую ракету и одну ступень для неё
-sonod_ship = Rocket.Rocket((10_000, 0), (50_000, math.pi / 2))
+sonod_ship = Rocket.Rocket((17_000, 0), (45_000, math.pi / 2))
 sonod_ship.CreateStage(stage=Rocket.Stage(*ALL_PARAMETERS_1))
 
  # Рисуем орбиту Кербина
 KERBIN_ORBIT = Models.OrbitKerbin()
 plt.plot(KERBIN_ORBIT[0], KERBIN_ORBIT[1])
 
+print(f'Масса ракеты перед началом полёта {sonod_ship.GetLastMass()}')
 X, Y = Models.Model(sonod_ship, sonod_ship.stages[0], sonod_ship.stages[0].duration)
+print(f'Масса ракеты под конец работы двигателей {sonod_ship.GetLastMass()}')
 
 plt.plot(X, Y)
 plt.gca().set_aspect('equal', adjustable='box')

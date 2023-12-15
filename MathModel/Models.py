@@ -28,10 +28,6 @@ def OrbitFunction(rocket: Rocket.Rocket) -> tuple:
     dt = duration / 1000
     while t <= duration:
         r = math.sqrt((pos[0] - xc) ** 2 + (pos[1] - yc) ** 2)  # расстояние относительно новых координат
-        height = r - Settings.KERBIN_RADIUS
-        press = Physics.Pressure(height)
-        VEL = math.sqrt(vel[0] ** 2 + vel[1] ** 2)
-        drag = Physics.Drag(Physics.Density(press), VEL, drag_coef, mass)
         a = [mu * (xc - pos[0]) / (r ** 3), mu * (yc - pos[1]) / (r ** 3)]  # обновляем ускорение
         
         vel = [vel[0] + a[0] * dt, vel[1] + a[1] * dt]  # обновляем скорость относительно старого ускорения
@@ -83,7 +79,7 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
     mu = Settings.mu
     g = Settings.g
     
-    t, dt = 0, 0.05  # time and delta time
+    t, dt = 0, stage_live_duration / 1000  # time and delta time
     X, Y = [], []
     is_apoasis_reached = False
 
@@ -105,7 +101,7 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         g_x, g_y = g * (xc - rocket.position[0]) / r, g * (yc - rocket.position[1]) / r
         a = [math.sin(angle) * (thrust - drag) / mass + g_x, 
                 math.cos(angle) * (thrust - drag) / mass + g_y]  # обновляем ускорение
-        
+
         # Считаем скорость в момент времени t + 1
         rocket.velocity = [rocket.velocity[0] + a[0] * dt, rocket.velocity[1] + a[1] * dt]
 
@@ -125,7 +121,7 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
             print(f'Двигатели нужно выключить на высоте {height} м')
             delta_v = math.sqrt(mu / apoapsis) * (1 - math.sqrt(periapsis / semi_major))
             print(f'При этом в апоцентре нужно будет ускориться на дельту {delta_v} м/с')
-            graph, _, _ = OrbitFunction(rocket)
+            graph, APOAPSIS, _ = OrbitFunction(rocket)
 
             plt.plot(graph[0], graph[1])
 
@@ -138,8 +134,6 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         t += dt
     else:
         print('мы так и не достигли апоцентра')
-    
-    print(f'Масса ракеты под конец работы двигателей {rocket.GetLastMass()}')
 
     return X, Y
 
