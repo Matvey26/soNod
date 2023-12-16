@@ -2,8 +2,6 @@ import json
 import math
 import matplotlib.pyplot as plt
 
-# Открываем файл для чтения
-
 velocity = []
 altitude = []
 
