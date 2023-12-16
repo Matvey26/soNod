@@ -149,6 +149,9 @@ print(time_when_end - ut())
 while time_when_end - ut() > 0:
     time.sleep(0.05)
 
+# Остановка логгера
+log.stop_logging()
+
 print("Ракета успешно выведена на орбиту 100 км")
 control.throttle = 0
 control.remove_nodes()
