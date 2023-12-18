@@ -9,7 +9,7 @@ continue_logging = True
 # Создаем файл с уникальным именем
 def create_log_file():
     current_time = datetime.datetime.now().strftime("%H-%M")  # Генерируем уникальное имя файла на основе текущего времени
-    file_name = f"Logs/{current_time}.json"
+    file_name = f"Autopilot/Logs/{current_time}.json"
     file = open(file_name, 'a')
     return file
 

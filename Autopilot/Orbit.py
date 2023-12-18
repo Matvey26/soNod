@@ -43,14 +43,24 @@ control.activate_next_stage()
 # параметры, с которыми ракета будет наклоняться в виде (высота апоцентра, угол рысканья)
 # первая точка, это какой угол должен быть в начале его изменения и на какой высоте апоцентра начать его менять
 # вторая точка, это значение угла в конце его изменения и высота апоцентра, на котором угол должен быть достигнут
-pos1, pos2 = (50_000, 90), (100_000, 0)
-k = (pos2[1] - pos1[1]) / (pos2[0] - pos1[0])
-b = pos1[1] - pos1[0] * k
+pos0, pos1 = (18500, 0), (58500, math.pi / 
+def set_elliptic(pos0, pos1):
+    p, q = pos0
+    s, r = pos1
+    a = s - p
+    b = r - q
+    
+    def func(x):
+        if x < pos0[0] or x > pos1[0]:
+            return pos0[1] if x < pos0[0] else pos1[1]
+        return math.sqrt(b ** 2 - (b / a) ** 2 * (x - s) ** 2) + q
+
+    return func
 
 
 # сама функция угла
-def angle(ap):
-  return k * ap + b
+angle = set_elliptic(pos0, pos1)
+
 
 
 """
@@ -61,19 +71,22 @@ def angle(ap):
     3. отбросить ускорители
 """
 # ждём, пока апоцентр достигнет нужной высоты
-while apoapsis() < pos1[0]:
+while altitude() < pos0[0]:
    time.sleep(0.5)  
 
 # наклоняем ракету до тех пор, пока топливо в тту не закончится
 while srb_fuel() >= 0.1:
     # print(apoapsis(), angle(apoapsis()))
-    ap.target_pitch = angle(apoapsis())
+    ap.target_pitch = math.degrees(math.pi / 2 - angle(altitude()))
+    print(srb_fuel(), math.degrees(math.pi / 2 - angle(altitude())))
     time.sleep(0.2)
 ap.target_pitch = 0
 
 # отсоединаяем их
 control.activate_next_stage()
 print("Ускорители отброшены")
+
+log.stop_logging()
 
 
 
@@ -145,7 +158,6 @@ while time_to_apoapsis() - (burn_time / 2) > 0:
 print("Запускаем двигатели")
 control.throttle = 1.0
 time_when_end = ut() + vessel.orbit.time_to_apoapsis + burn_time / 2
-print(time_when_end - ut())
 while time_when_end - ut() > 0:
     time.sleep(0.05)
 
