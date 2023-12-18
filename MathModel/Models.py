@@ -81,6 +81,7 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
     
     t, dt = 0, stage_live_duration / 1000  # time and delta time
     X, Y = [], []
+    VEL_LEN, HEIGHT = [], []
     is_apoasis_reached = False
 
     t = 0
@@ -108,6 +109,9 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         # Считаем координаты ракеты в момент времени t + 1
         rocket.position = [rocket.position[0] + rocket.velocity[0] * dt, rocket.position[1] +rocket.velocity[1] * dt]
 
+        VEL_LEN.append(velocity)
+        HEIGHT.append(height)
+
         # Считаем необходимые величины для поиска апоцентра
         h_squared = (radius_vector[0] * velocity_vector[1] - radius_vector[1] * velocity_vector[0]) ** 2  # specific relative angular momentum в квадрате
         epsilon = (velocity ** 2) / 2 - mu / r  # specific orbital energy
@@ -123,7 +127,7 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
             # print(f'При этом в апоцентре нужно будет ускориться на дельту {delta_v} м/с')
             graph, APOAPSIS, _ = OrbitFunction(rocket)
 
-            return (X, Y), graph, delta_v
+            return (X, Y), graph, delta_v, (VEL_LEN, HEIGHT)
             
 
         X.append(rocket.position[0])
@@ -132,5 +136,5 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         t += dt
     else:
         # print('мы так и не достигли апоцентра')
-        return (X, Y), (), 10**10
+        return (X, Y), (), 10**10, ()
 
