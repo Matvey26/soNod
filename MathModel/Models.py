@@ -118,14 +118,12 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
         periapsis = (1 - eccentricity) * semi_major
 
         if apoapsis >= Settings.target_apoapsis:
-            print(f'Двигатели нужно выключить на высоте {height} м')
+            # print(f'Двигатели нужно выключить на высоте {height} м')
             delta_v = math.sqrt(mu / apoapsis) * (1 - math.sqrt(periapsis / semi_major))
-            print(f'При этом в апоцентре нужно будет ускориться на дельту {delta_v} м/с')
+            # print(f'При этом в апоцентре нужно будет ускориться на дельту {delta_v} м/с')
             graph, APOAPSIS, _ = OrbitFunction(rocket)
 
-            plt.plot(graph[0], graph[1])
-
-            break
+            return (X, Y), graph, delta_v
             
 
         X.append(rocket.position[0])
@@ -133,7 +131,6 @@ def Model(rocket: Rocket.Rocket, stage: Rocket.Stage, stage_live_duration: float
 
         t += dt
     else:
-        print('мы так и не достигли апоцентра')
-
-    return X, Y
+        # print('мы так и не достигли апоцентра')
+        return (X, Y), (), 10**10
 
