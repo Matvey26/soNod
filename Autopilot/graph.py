@@ -6,10 +6,9 @@ velocity = []
 altitude = []
 
 # Считываем данные с логов
-with open('Autopilot/Logs/17-26.json', 'r') as file:
+with open('Autopilot/Logs/18-31.json', 'r') as file:
     for line in file:
         data = json.loads(line)
-        print(data)
         velocity.append(math.sqrt((data["Velocity"][0]) ** 2 + (data["Velocity"][1]) ** 2 + (data["Velocity"][2]) ** 2))
         altitude.append(data["Altitude"])
 
