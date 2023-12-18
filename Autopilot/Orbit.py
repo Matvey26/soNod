@@ -1,6 +1,9 @@
 import krpc
 import time
 import math
+import threading
+
+import logger as log
 
 conn = krpc.connect()  # подключаемся к серверу 
 vessel = conn.space_center.active_vessel  # активный корабль
@@ -13,13 +16,17 @@ ap.engage()
 
 # переменные потоки, при вызове которых мы получаем данные из KSP
 ut = conn.add_stream(getattr, conn.space_center, 'ut')  # текущее время в KSP
-stage_5_resources = vessel.resources_in_decouple_stage(stage=5, cumulative=False)  # пятая ступень (та, где отделяются ускорители)
-srb_fuel = conn.add_stream(stage_5_resources.amount, 'SolidFuel')  # количество топлива во всех ускорителях в сумме
+stage_4_resources = vessel.resources_in_decouple_stage(stage=4, cumulative=False)  # пятая ступень (та, где отделяются ускорители)
+srb_fuel = conn.add_stream(stage_4_resources.amount, 'SolidFuel')  # количество топлива во всех ускорителях в сумме
 altitude = conn.add_stream(getattr, vessel.flight(), 'mean_altitude')  # высота над уровнем моря в метрах
 apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')  # высота апоцентра в метрах, если считать от уровня моря
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')  # высота перицентра в метрах, если счтиать от уровня моря
 pitch = conn.add_stream(getattr, vessel.flight(), 'pitch')  # рысканье ракеты
 
+# создаем отдельный поток для логирования
+log_file = log.create_log_file()
+log_thread = threading.Thread(target=log.collect_data_and_log, args=(vessel, log_file,))
+log_thread.start()
 
 # запускаем ракету
 print("3...")
@@ -58,7 +65,7 @@ while apoapsis() < pos1[0]:
    time.sleep(0.5)  
 
 # наклоняем ракету до тех пор, пока топливо в тту не закончится
-while srb_fuel() >= 0.01:
+while srb_fuel() >= 0.1:
     # print(apoapsis(), angle(apoapsis()))
     ap.target_pitch = angle(apoapsis())
     time.sleep(0.2)
@@ -77,7 +84,7 @@ print("Ускорители отброшены")
     1. Открыть солнечные панели
     2. Набрать необходимую дельта скорость
 """
-# Получение конкертной антенны и солнечной панели
+# Получение конкретной антенны и солнечной панели
 antennas = vessel.parts.antennas
 solar_pannels = vessel.parts.solar_panels
 
