@@ -16,8 +16,8 @@ ap.engage()
 
 # переменные потоки, при вызове которых мы получаем данные из KSP
 ut = conn.add_stream(getattr, conn.space_center, 'ut')  # текущее время в KSP
-stage_5_resources = vessel.resources_in_decouple_stage(stage=5, cumulative=False)  # пятая ступень (та, где отделяются ускорители)
-srb_fuel = conn.add_stream(stage_5_resources.amount, 'SolidFuel')  # количество топлива во всех ускорителях в сумме
+stage_4_resources = vessel.resources_in_decouple_stage(stage=4, cumulative=False)  # пятая ступень (та, где отделяются ускорители)
+srb_fuel = conn.add_stream(stage_4_resources.amount, 'SolidFuel')  # количество топлива во всех ускорителях в сумме
 altitude = conn.add_stream(getattr, vessel.flight(), 'mean_altitude')  # высота над уровнем моря в метрах
 apoapsis = conn.add_stream(getattr, vessel.orbit, 'apoapsis_altitude')  # высота апоцентра в метрах, если считать от уровня моря
 periapsis = conn.add_stream(getattr, vessel.orbit, 'periapsis_altitude')  # высота перицентра в метрах, если счтиать от уровня моря
@@ -65,7 +65,7 @@ while apoapsis() < pos1[0]:
    time.sleep(0.5)  
 
 # наклоняем ракету до тех пор, пока топливо в тту не закончится
-while srb_fuel() >= 0.01:
+while srb_fuel() >= 0.1:
     # print(apoapsis(), angle(apoapsis()))
     ap.target_pitch = angle(apoapsis())
     time.sleep(0.2)
@@ -148,9 +148,6 @@ time_when_end = ut() + vessel.orbit.time_to_apoapsis + burn_time / 2
 print(time_when_end - ut())
 while time_when_end - ut() > 0:
     time.sleep(0.05)
-
-# Остановка логгера
-log.stop_logging()
 
 print("Ракета успешно выведена на орбиту 100 км")
 control.throttle = 0

@@ -4,8 +4,6 @@ import math
 
 conn = krpc.connect()  # подключаемся к серверу 
 vessel = conn.space_center.active_vessel  # активный корабль
-control = vessel.control  # контролировать корабль
-ap = vessel.auto_pilot  # работать с автопилотом
 
 # переменные потоки, при вызове которых мы получаем данные из KSP
 ut = conn.add_stream(getattr, conn.space_center, 'ut')  # текущее время в KSP
