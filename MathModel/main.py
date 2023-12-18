@@ -51,77 +51,13 @@ def set_elliptic(pos0, pos1):
     return func
 
 
-def EXPERIMENTS_WITH_LINEAR_FUNCTION():
-    OPTIMAL_LIN = [(0, 0), ([], []), ([], []), 10**10]
-    index = 1
-    # Эксперементируем с линейной функцией
-    for low in range(8_000, 30_001, 1_500):
-        for high in range(30_000, 80_001, 1_500):
-            lin_func = set_linear((low, 0), (high, math.pi / 2))
-            sonod_ship = Rocket.Rocket(lin_func)
-            sonod_ship.CreateStage(stage=Rocket.Stage(*ALL_PARAMETERS_1))
-
-            traectory, orbit, dv = Models.Model(sonod_ship, sonod_ship.stages[0], sonod_ship.stages[0].duration)
-
-            if dv < OPTIMAL_LIN[3]:
-                OPTIMAL_LIN[0] = (low, high)
-                OPTIMAL_LIN[1] = traectory
-                OPTIMAL_LIN[2] = orbit
-                OPTIMAL_LIN[3] = dv
-            
-            index += 1
-
-    print("Необходимый delta_v", OPTIMAL_LIN[3])
-    print(OPTIMAL_LIN[0])
-
-    # Рисуем орбиту Кербина
-    KERBIN_ORBIT = Models.OrbitKerbin()
-    plt.plot(*KERBIN_ORBIT)
-    plt.plot(*OPTIMAL_LIN[1])
-    plt.plot(*OPTIMAL_LIN[2])
-    plt.gca().set_aspect('equal', adjustable='box')
-    plt.show()
-
-
-def EXPERIMENTS_WITH_PARABOLIC_FUNCTION():
-    OPTIMAL_PARABOL = [(0, 0), ([], []), ([], []), 10**10]
-    index = 1
-    # Эксперементируем с линейной функцией
-    for low in range(8_000, 30_001, 1_500):
-        for high in range(30_000, 60_001, 1_500):
-            lin_func = set_parabolic((low, 0), (high, math.pi / 2))
-            sonod_ship = Rocket.Rocket(lin_func)
-            sonod_ship.CreateStage(stage=Rocket.Stage(*ALL_PARAMETERS_1))
-
-            traectory, orbit, dv = Models.Model(sonod_ship, sonod_ship.stages[0], sonod_ship.stages[0].duration)
-
-            if dv < OPTIMAL_PARABOL[3]:
-                OPTIMAL_PARABOL[0] = (low, high)
-                OPTIMAL_PARABOL[1] = traectory
-                OPTIMAL_PARABOL[2] = orbit
-                OPTIMAL_PARABOL[3] = dv
-            
-            index += 1
-
-    print("Необходимый delta_v", OPTIMAL_PARABOL[3])
-    print(OPTIMAL_PARABOL[0])
-
-    # Рисуем орбиту Кербина
-    KERBIN_ORBIT = Models.OrbitKerbin()
-    plt.plot(*KERBIN_ORBIT)
-    plt.plot(*OPTIMAL_PARABOL[1])
-    plt.plot(*OPTIMAL_PARABOL[2])
-    plt.gca().set_aspect('equal', adjustable='box')
-    plt.show()
-
-
-def EXPERIMENTS_WITH_ELLIPTIC_FUNCTION():
+def EXPERIMENTS(function_setter):
     OPTIMAL_ELLIPTIC = [(0, 0), ([], []), ([], []), 10**10]
     index = 1
     # Эксперементируем с линейной функцией
     for low in range(8_000, 30_001, 1_500):
         for high in range(30_000, 60_001, 1_500):
-            lin_func = set_elliptic((low, 0), (high, math.pi / 2))
+            lin_func = function_setter((low, 0), (high, math.pi / 2))
             sonod_ship = Rocket.Rocket(lin_func)
             sonod_ship.CreateStage(stage=Rocket.Stage(*ALL_PARAMETERS_1))
 
@@ -148,8 +84,8 @@ def EXPERIMENTS_WITH_ELLIPTIC_FUNCTION():
 
 
 print("Эллиптический закон")
-EXPERIMENTS_WITH_ELLIPTIC_FUNCTION()
+EXPERIMENTS(set_elliptic)
 print("Линейный закон")
-EXPERIMENTS_WITH_LINEAR_FUNCTION()
+EXPERIMENTS(set_linear)
 print("Параболический закон")
-EXPERIMENTS_WITH_PARABOLIC_FUNCTION()
+EXPERIMENTS(set_parabolic)
